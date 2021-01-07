@@ -1,0 +1,19 @@
+.favourite-list-button {
+  padding-right: 20px;
+  padding-left: 20px;
+  border: none;
+  background-color: white;
+  position: fixed !important;
+}
+
+.favourite-button {
+  width: 100% !important;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.favourite-labels {
+  font-size: 16px !important;
+}

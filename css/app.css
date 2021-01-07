@@ -1,0 +1,173 @@
+body{
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+h5 {
+  font-size: 22px;
+  line-height: 110%;
+  margin: 1.0933333333rem 0 .656rem 0;
+}
+
+*.color-main, *.color-main:hover {
+  background-color: #45AF70;
+}
+
+  /* label color */
+  .input-field label {
+    color: rgb(73, 73, 73) !important;
+  }
+
+  /* label focus color */
+  .input-field input[type=text]:focus + label,
+  .input-field input[type=password]:focus + label  {
+    color: #45AF70 !important;
+  }
+
+  /* label underline focus color */
+  .input-field input[type=text]:focus,
+  .input-field input[type=password]:focus {
+    border-bottom: 1px solid #45AF70 !important;
+    box-shadow: 0 1px 0 0 #45AF70 !important;
+  }
+
+  /* valid color */
+  .input-field input[type=text].valid,
+  .input-field input[type=password].valid {
+    border-bottom: 1px solid #45AF70 !important;
+    box-shadow: 0 1px 0 0 #45AF70 !important;
+  }
+
+  /* invalid label focus color */
+  .input-field input[type=text].invalid:focus + label,
+  .input-field input[type=password].invalid:focus + label  {
+    color: rgb(182, 0, 0) !important;
+  }
+
+  /* invalid label underline focus color */
+  .input-field input[type=text].invalid:focus,
+  .input-field input[type=password].invalid:focus {
+    border-bottom: 1px solid rgb(182, 0, 0) !important;
+    box-shadow: 0 1px 0 0 rgb(143, 0, 0) !important;
+  }
+
+  /* invalid color */
+  .input-field input[type=text].invalid,
+  .input-field input[type=password].invalid {
+    border-bottom: 1px solid rgb(182, 0, 0) !important;
+    box-shadow: 0 1px 0 0 rgb(143, 0, 0)important;
+  }
+  /* icon prefix focus color */
+  .input-field .prefix.active {
+    color: #000 !important;
+  }
+
+  .justify {
+    text-align: justify;
+  }
+
+  .lineheight-min {
+    line-height: 1.0;
+  }
+
+  .button {
+    margin-top: 30px;
+    background-color: #45AF70;
+    color: white;
+    BORDER: NONE;
+    border-radius: 8px;
+    margin-bottom: 25px;
+  }
+  .button:hover {background-color: #4FC57F;}
+
+  .button:active {background-color: #39925d;}
+
+  .button:focus {background-color: #318352;}
+
+#forgotPassword{
+    font-size: 12px;
+}
+
+#pageTitle{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 auto !important;
+
+}
+
+.logo{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.video{
+  display: flex;
+  max-width: 150px;
+  height: 250px;
+  background-color: chartreuse;
+}
+.hidden {
+  visibility: hidden !important;
+}
+.landing-item{
+  margin-top: 10px;
+}
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+  .main {
+    width: 100%;
+    padding: 0;
+  }
+  .right {
+    width: 100%;
+  }
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+  .ui-block-a.landing-item,.ui-block-b.landing-item{
+    width : 100%;
+  }
+}
+.uiLandingPage{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.landing-heading{
+  font-weight: 700;
+}
+
+.landing-paragraph{
+  text-align: center;
+}
+
+.hidden{
+  visibility: hidden;
+}
+
+.bottom-margin{
+  margin-bottom: 10px;
+}
+
+.icon-red{
+  color: red !important;
+}
+
+.icon-shadow{
+  text-shadow: 0px 0px 3px black;
+}
+
+.no-padding{
+  padding: 0 !important;
+}

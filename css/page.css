@@ -1,0 +1,10 @@
+.ui-content{
+    padding: 0 0;
+    margin-bottom: 55px;
+}
+
+
+.ui-content .main-content {
+    padding: 0 10px;
+    margin-top: 10px;
+}
