@@ -1,3 +1,71 @@
+/*prograss bar*/
+.container{
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  margin-top: 20px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.progressbar{
+  counter-reset: step;
+}
+.progressbar li{
+  float: left;
+  width: 20%;
+  position: relative;
+  text-align: center;
+}
+.progressbar li:before{
+  content:counter(step);
+  counter-increment: step;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #D4D4D4;
+  display: block;
+  margin: 0 auto 10px auto;
+  border-radius: 50%;
+  line-height: 27px;
+  background: white;
+  color: black;
+  text-align: center;
+  font-weight: bold;
+}
+.progressbar li:after{
+  content: '';
+  position: absolute;
+  width:100%;
+  height: 3px;
+  background: #D4D4D4;
+  top: 15px;
+  left: -50%;
+  z-index: -1;
+}
+.progressbar li.active:before{
+ border-color: #4CAF50;
+ background: #4CAF50;
+ color: black;
+}
+.progressbar li.active:after{
+ background: #4CAF50;
+}
+.progressbar li.active - li:after{
+ background: #4CAF50;
+}
+.progressbar li.active - li:before{
+border-color: #4CAF50;
+background: #4CAF50;
+color: black;
+}
+.progressbar li:first-child:after{
+ content: none;
+}
+
+.order{
+    padding-top: 120px;
+    text-align: center;
+}
+
 .payment-button {
   width: 100% !important;
   background-color: #4CAF50;
