@@ -66,6 +66,21 @@ color: black;
     text-align: center;
 }
 
+.payment{
+    text-align: center;
+}
+
+.payment-container{
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+span.price {
+  float: right;
+}
+
 .payment-button {
   width: 100% !important;
   background-color: #4CAF50;
