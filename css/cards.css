@@ -84,14 +84,14 @@
         margin-left: 5px;
     }
 
-    .favourite-card{
+    .item-card{
         overflow: hidden;
         display: flex;
         width: 48%;
         margin: 5px;
     }
 
-    .favourite-image-container{
+    .item-image-container{
         overflow: hidden;
         width: 40%;
         height: 120px;
@@ -105,7 +105,7 @@
         height: 100%;
     }
 
-    .favourite-details{
+    .item-details{
         width: 50%;
         font-size: 10px;
         padding: 10px;
@@ -116,16 +116,16 @@
         padding: 10px;
     }
 
-    .place-header-container{
+    .item-header-container{
         display: flex;
         justify-content: space-between;
     }
 
-    .place-header-text{
+    .item-header-text{
         font-size: 14px;
     }
 
-    .places-container{
+    .item-container{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -137,10 +137,10 @@
         padding: 0 15px;
     }
     @media only screen and (max-width: 600px) {
-        .places-container{
+        .item-container{
             flex-direction: column;
         }
-        .favourite-card{
+        .item-card{
             width: 97%;
         }
     }
