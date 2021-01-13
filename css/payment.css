@@ -80,18 +80,50 @@ color: black;
 
 /*Payment Container*/
 .payment-container{
-  padding: 5px 20px 2px 20px;
+  padding: 5px 20px 0px 20px;
 }
 
 span.price {
   float: right;
 }
 
+/*Order Review Summary*/
 #inline-summary{width:100%;height:auto;background-color:#707070;display:flex;}
 .summary,.address{width:50%;height:110px;background-color:#D4D4D4;margin:1px; padding-left:5px;}
 
+/*Checkout Container*/
+.checkout-container{
+  padding: 5px 10px 10px 10px;
+  border: 1px solid #707070;
+  border-radius: 3px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.promo-container{
+  padding: 5px 10px 10px 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
 
 .payment-button {
+  width: 100% !important;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+/*Place order button*/
+.place-order-list-button {
+  padding-right: 20px;
+  padding-left: 20px;
+  border: none;
+  background-color: white;
+  position: fixed !important;
+}
+
+.place-order-button {
   width: 100% !important;
   background-color: #4CAF50;
   color: white;

@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+    <title>Freshmart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="../library/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="../library/jquery/jquery.mobile.structure-1.4.5.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="../library/materialize/css/materialize.min.css" />
+    <link rel="stylesheet" href="../css/payment.css" />
+
+    <!-- Scripts -->
+    <script src="../library/jquery/jquery-1.11.1.js"></script>
+    <script src="../library/jquery/jquery.mobile-1.4.5.min.js"></script>
+    </head>
+	<body>
+
+	<div data-role="page">
+        <div role="content">
+
+            <div class="main-content">
+                <div class="root">
+                 <div class="container">
+                      <ul class="progressbar">
+                        <li class="active">Checkout</li>
+                        <li>Confirm</li>
+                        <li>Success</li>
+                        <li>Order Review</li>
+                      </ul>
+                  </div>
+                </div>
+
+                <div style="padding-left:10px; padding-top: 100px;">
+                    <h3>Checkout</h3>
+                </div>
+
+                <div class="checkout-container">
+                    <div>
+                        <div class="checkout-header-container">
+                            <strong class="checkout-header-text"><b>DELIVERY ADDRESS</b></strong>
+                        </div>
+                        <div>
+                            <p><b>Prabath Bandara</b></p>
+                        </div>
+                        <span class="d-inline-block">No. 123. Sub Street, City Name, Province</span>
+                        <span class="d-inline-block" style="color: black; float: right;">
+                            <i class="fas fa-pen" style="font-size: 18px;"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <div style="padding-top: 10px;"></div>
+
+                <div class="checkout-container">
+                    <div>
+                        <div class="checkout-header-container">
+                            <strong class="checkout-header-text"><b>PAYMENT METHOD</b></strong>
+                        </div>
+                        <span class="d-inline-block" style="float: left;"><img src="G:/Documents/IIT Fourth Year/Semester 1/Mobile User Experience/Coursework 2/Freshmart/images/master.png"></span>
+
+                        <span class="d-inline-block" style="padding-left: 20px;"> Master Card Ending  **16</span>
+
+                        <span class="d-inline-block" style="color: black; float: right;">
+                            <i class="fas fa-angle-right" style="font-size: 20px;"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <div style="padding-top: 10px;"></div>
+
+                <div class="checkout-container">
+                    <div>
+                        <div class="checkout-header-container">
+                            <strong class="checkout-header-text"><b>ITEMS</b></strong>
+                        </div>
+
+                        <table>
+                          <colgroup span="4"></colgroup>
+                          <tr class="item-header-container">
+                            <td><img src="G:/Documents/IIT Fourth Year/Semester 1/Mobile User Experience/Coursework 2/Freshmart/images/hotdog.png"></td>
+                            <td>Hot Dog Bun<br>Rs. 100.00</td>
+                            <td><i class="fas fa-minus-square" style="font-size: 20px; color: #FFD314;"></i>1<i class="fas fa-plus-square" style="font-size: 20px; color: #FFD314;"></i></td>
+                          </tr>
+                          <tr class="item-header-container">
+                            <td><img src="G:/Documents/IIT Fourth Year/Semester 1/Mobile User Experience/Coursework 2/Freshmart/images/InguruBiscuit.png"></td>
+                            <td>Maliban Inguru Biscuit<br>Rs. 120.00</td>
+                            <td><i class="fas fa-minus-square" style="font-size: 20px; color: #FFD314;"></i>2<i class="fas fa-plus-square" style="font-size: 20px; color: #FFD314;"></i></td>
+                          </tr>
+                          <tr class="item-header-container">
+                            <td><img src="G:/Documents/IIT Fourth Year/Semester 1/Mobile User Experience/Coursework 2/Freshmart/images/PepsiCan.png"></td>
+                            <td>Pepsi Can<br>Rs. 500.00</td>
+                            <td><i class="fas fa-minus-square" style="font-size: 20px; color: #FFD314;"></i>2<i class="fas fa-plus-square" style="font-size: 20px; color: #FFD314;"></i></td>
+                          </tr>
+                        </table>
+
+                    </div>
+                </div>
+
+                <div style="padding-top: 10px;"></div>
+
+                <div class="promo-container">
+                    <div>
+                    <span class="d-inline-block" style="float: left;"><i class="fas fa-tag" style="color: #4CAF50;font-size: 20px;"></i></span>
+
+                    <span class="d-inline-block" style="padding-left: 20px; color: #4CAF50;">Add Loyal Point Promotions</span>
+
+                    <span class="d-inline-block" style="color: #4CAF50; float: right;">
+                        <i class="fas fa-angle-right" style="font-size: 20px;"></i>
+                    </span>
+                    </div>
+                </div>
+
+                <div class="payment-container">
+                    <p>Subtotal <span class="price">$15</span></p>
+                    <p>Discount <span class="price">$5</span></p>
+                    <p>Delivery <span class="price">$8</span></p>
+                    <hr>
+                    <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
+                </div>
+
+                <div style="padding-top: 50px;"></div>
+
+            </div>
+        </div>
+
+    <div data-role="footer" class="place-order-list-button" style="position:absolute; bottom:0px; left:0px; right:0px; overflow:hidden;">
+        <span class="d-inline-block" style="float: left; padding-bottom: 10px;">
+            <p>TOTAL <br/> <span class="price" style="color:#4CAF50;"><b>Rs. 800.00</b></span></p>
+        </span>
+
+        <span class="d-inline-block" style="float: right; padding-top:10px;">
+            <a href="../html/share-favourite.html" data-role="button" class="place-order-button"><b>Place Order</b></a>
+        </span>
+    </div>
+
+    </div>
+
+    </body>
+
+</html>
