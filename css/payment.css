@@ -61,25 +61,35 @@ color: black;
  content: none;
 }
 
+/*Order Confirmation Page Image*/
 .order{
     padding-top: 120px;
     text-align: center;
 }
 
+/*Payment Page Image*/
 .payment{
     text-align: center;
 }
 
+/*Order Review Page Image*/
+.order-review{
+    padding-top: 100px;
+    text-align: center;
+}
+
+/*Payment Container*/
 .payment-container{
-  background-color: #f2f2f2;
-  padding: 5px 20px 15px 20px;
-  border: 1px solid lightgrey;
-  border-radius: 3px;
+  padding: 5px 20px 2px 20px;
 }
 
 span.price {
   float: right;
 }
+
+#inline-summary{width:100%;height:auto;background-color:#707070;display:flex;}
+.summary,.address{width:50%;height:110px;background-color:#D4D4D4;margin:1px; padding-left:5px;}
+
 
 .payment-button {
   width: 100% !important;
