@@ -76,30 +76,33 @@
                             <strong class="checkout-header-text"><b>ITEMS</b></strong>
                         </div>
 
-                        <table>
-                          <colgroup span="4"></colgroup>
-                          <tr class="item-header-container">
-                            <td><img src="../images/hotdog.png"></td>
-                            <td>Hot Dog Bun<br>Rs. 100.00</td>
-                            <td><i class="fas fa-minus-square" style="font-size: 20px; color: #FFD314; padding-right: 10px;"></i>
-                            <span style="font-size: 20px;">1</span>
-                            <i class="fas fa-plus-square" style="font-size: 20px; color: #FFD314;padding-left: 10px;"></i></td>
-                          </tr>
-                          <tr class="item-header-container">
-                            <td><img src="../images/InguruBiscuit.png"></td>
-                            <td>Maliban Inguru Biscuit<br>Rs. 120.00</td>
-                            <td><i class="fas fa-minus-square" style="font-size: 20px; color: #FFD314; padding-right: 10px;"></i>
-                            <span style="font-size: 20px;">1</span>
-                            <i class="fas fa-plus-square" style="font-size: 20px; color: #FFD314;padding-left: 10px;"></i></td>
-                          </tr>
-                          <tr class="item-header-container">
-                            <td><img src="../images/PepsiCan.png"></td>
-                            <td>Pepsi Can<br>Rs. 500.00</td>
-                            <td><i class="fas fa-minus-square" style="font-size: 20px; color: #FFD314; padding-right: 10px;"></i>
-                            <span style="font-size: 20px;">1</span>
-                            <i class="fas fa-plus-square" style="font-size: 20px; color: #FFD314;padding-left: 10px;"></i></td>
-                          </tr>
-                        </table>
+                        <div id="selectedItemView">
+
+                        </div>
+<!--                        <table>-->
+<!--                          <colgroup span="4"></colgroup>-->
+<!--                                <tr class="item-header-container">-->
+<!--                                    <td><img src="../images/hotdog.png"></td>-->
+<!--                                    <td>Hot Dog Bun<br>Rs. 100.00</td>-->
+<!--                                    <td><i class="fas fa-minus-square" style="font-size: 20px; color: #FFD314; padding-right: 10px;"></i>-->
+<!--                                        <span style="font-size: 20px;">1</span>-->
+<!--                                        <i class="fas fa-plus-square" style="font-size: 20px; color: #FFD314;padding-left: 10px;"></i></td>-->
+<!--                                </tr>-->
+<!--                                <tr class="item-header-container">-->
+<!--                                    <td><img src="../images/InguruBiscuit.png"></td>-->
+<!--                                    <td>Maliban Inguru Biscuit<br>Rs. 120.00</td>-->
+<!--                                    <td><i class="fas fa-minus-square" style="font-size: 20px; color: #FFD314; padding-right: 10px;"></i>-->
+<!--                                        <span style="font-size: 20px;">1</span>-->
+<!--                                        <i class="fas fa-plus-square" style="font-size: 20px; color: #FFD314;padding-left: 10px;"></i></td>-->
+<!--                                </tr>-->
+<!--                                <tr class="item-header-container">-->
+<!--                                    <td><img src="../images/PepsiCan.png"></td>-->
+<!--                                    <td>Pepsi Can<br>Rs. 500.00</td>-->
+<!--                                    <td><i class="fas fa-minus-square" style="font-size: 20px; color: #FFD314; padding-right: 10px;"></i>-->
+<!--                                        <span style="font-size: 20px;">1</span>-->
+<!--                                        <i class="fas fa-plus-square" style="font-size: 20px; color: #FFD314;padding-left: 10px;"></i></td>-->
+<!--                                </tr>-->
+<!--                        </table>-->
 
                     </div>
                 </div>
@@ -119,11 +122,11 @@
                 </div>
 
                 <div class="payment-container">
-                    <p>Subtotal <span class="price">$15</span></p>
-                    <p>Discount <span class="price">$5</span></p>
-                    <p>Delivery <span class="price">$8</span></p>
+                    <p>Subtotal <span id="subtotal" class="price"></span></p>
+                    <p>Discount <span id="discount" class="price">5%</span></p>
+                    <p>Delivery <span id="delivery" class="price">300.00</span></p>
                     <hr>
-                    <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
+                    <p>Total <span id="total" class="price" style="color:black"><b></b></span></p>
                 </div>
 
                 <div style="padding-top: 50px;"></div>
@@ -133,7 +136,7 @@
 
     <div data-role="footer" class="place-order-list-button" style="position:absolute; bottom:0px; left:0px; right:0px; overflow:hidden;">
         <span class="d-inline-block" style="float: left; padding-bottom: 10px;">
-            <p>TOTAL <br/> <span class="price" style="color:#4CAF50;"><b>Rs. 800.00</b></span></p>
+            <p>TOTAL <br/> <span id="total2" class="price" style="color:#4CAF50;"><b></b></span></p>
         </span>
 
         <span class="d-inline-block" style="float: right; padding-top:10px;">
@@ -152,7 +155,8 @@
         location.href = "../html/payment-method.html";
     };
     </script>
-
+    <script type="text/javascript" src="../data/products.json" ></script>
+    <script type="text/javascript" src="../js/checkout.js" ></script>
     </body>
 
 </html>
