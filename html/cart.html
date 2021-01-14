@@ -8,9 +8,14 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
     <link rel="stylesheet" href="../library/materialize/css/materialize.min.css" />
+        <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
 
     <link rel="stylesheet" href="../css/cards.css" />
     <link rel="stylesheet" href="../css/cart.css" />
+    <link rel="stylesheet" href="../css/app.css"/>
+    <link rel="stylesheet" href="../css/header.css"/>
+       <link rel="stylesheet" href="../css/footer.css">
 
     <!-- Scripts -->
     <script src="../library/jquery/jquery-1.11.1.js"></script>
@@ -19,38 +24,66 @@
 	<body>
 
     <div data-role="page">
-        <div role="content">
 
-            <div class="main-content">
+       <div data-role="header">
+                <div class="container">
+                    <div class="header-icon">
+                        <div class="icon">
+                            <a href="" data-ajax="false" class="icon">
+                                <i class="zmdi zmdi-chevron-left zmdi-hc-2x"></i>
+                            </a>
+                        </div>
+                    </div>
+					<div class="header-icon">
+                        <div class="icon">
+                            <a href="" data-ajax="false" class="icon">
+                                <i class="zmdi zmdi-sign-in zmdi-hc-2x"></i>
+                            </a>
+                        </div>
+                    </div>
 
-            <h4 style="text-align: center"> My Cart</h4>
+					<div class="heading">
+                        <div class="logo">
+						<img src="../images/logo color-01.png" style="width:80px;height:50px;margin: 5px;"><br>
+						</div>
+                    </div>
 
-<!--            <div style="padding-left: 10px; padding-right: 10px; padding-bottom: 10px;">
-                <span class="d-inline-block" style="float: left;"><input
-                        style="width: 15px"
-                        type="checkbox"
-                        id="remember-me"
-                      /> Select All </span>
+					 <div class="header-icon">
+                        <div class="icon">
+                            <a href="" data-ajax="false" class="icon" >
+                                <i class="zmdi zmdi-search zmdi-hc-2x"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="header-icon">
+                        <div class="icon">
+                            <a href="" data-ajax="false" class="icon" >
+                                <i class="zmdi zmdi-shopping-cart zmdi-hc-2x"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                <span class="d-inline-block" style="float: right; padding-top:10px;">
-                    <i class="fas fa-trash-alt" style="font-size: 20px;"></i>
-                </span>
-            </div>-->
+            <div data-role="content" >
+            <div class="main-content" style="margin-top: 50px;">
+               <h4 style="text-align: center"> My Cart</h4>
+
 
             <div id="item-list" class="item-container" style="padding-left: 10px; padding-right: 10px;">
 
                 <div class="card item-card">
-                <div class="item-image-container" style="background-image: url('../images/kottu-me.jpg')"></div>
+                <div class="item-image-container" style="background-image: url('../images/kitkat.png')"></div>
                 <div class="item-details">
                     <div>
                         <div class="item-header-container">
-                            <strong class="item-header-text"><b>Maggi Papare Kottu</b></strong>
+                            <strong class="item-header-text"><b>KitKat Chunky Chocolate</b></strong>
                         </div>
                         <div>
-                            <p>Maggi Papare Kottu, a mouth-watering and tongue-tingling Noodle made using Onion, Garlic, Chilli and Pepper.</p>
+                            <p>The standard bars consist of two or four pieces composed of three layers of wafer, separated and covered by an outer layer.</p>
                         </div>
                         <div>
-                            <p><b>Rs. 60.00</b></p>
+                            <p><b>Rs. 400.00</b></p>
                         </div>
                         <div>
                             <i class="fas fa-minus-square" style="font-size: 20px; color: #FFD314; padding-right: 10px;"></i>
@@ -84,39 +117,17 @@
             </div>
 
                 <div class="card item-card">
-                <div class="item-image-container" style="background-image: url('G:/Documents/IIT Fourth Year/Semester 1/Mobile User Experience/Coursework 2/Freshmart/images/kottume.jpg')"></div>
+                <div class="item-image-container" style="background-image: url('../images/munchee-kome.png')"></div>
                 <div class="item-details">
                     <div>
                         <div class="item-header-container">
-                            <strong class="item-header-text"><b>Maggi Papare Kottu</b></strong>
+                            <strong class="item-header-text"><b>Munchee Kome</b></strong>
                         </div>
                         <div>
-                            <p>Maggi Papare Kottu, a mouth-watering and tongue-tingling Noodle made using Onion, Garlic, Chilli and Pepper.</p>
+                            <p>Munchee Rice Cracker uses the nations staple grain to create a wholesome and tasty snack. It has a unique texture, light yet full of satisfying goodness.</p>
                         </div>
                         <div>
-                            <p><b>Rs. 60.00</b></p>
-                        </div>
-                        <div>
-                            <i class="fas fa-minus-square" style="font-size: 20px; color: #FFD314; padding-right: 10px;"></i>
-                            <span style="font-size: 20px;">1</span>
-                            <i class="fas fa-plus-square" style="font-size: 20px; color: #FFD314; padding-left:10px;"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-                <div class="card item-card">
-                <div class="item-image-container" style="background-image: url('G:/Documents/IIT Fourth Year/Semester 1/Mobile User Experience/Coursework 2/Freshmart/images/kottume.jpg')"></div>
-                <div class="item-details">
-                    <div>
-                        <div class="item-header-container">
-                            <strong class="item-header-text"><b>Maggi Papare Kottu</b></strong>
-                        </div>
-                        <div>
-                            <p>Maggi Papare Kottu, a mouth-watering and tongue-tingling Noodle made using Onion, Garlic, Chilli and Pepper.</p>
-                        </div>
-                        <div>
-                            <p><b>Rs. 60.00</b></p>
+                            <p><b>Rs. 100.00</b></p>
                         </div>
                         <div>
                             <i class="fas fa-minus-square" style="font-size: 20px; color: #FFD314; padding-right: 10px;"></i>
@@ -129,24 +140,39 @@
 
              </div>
 
-            <div style="padding-top: 50px;"></div>
+            <div style="padding-top: 80px;"></div>
 
             </div>
 
         </div>
 
-    <div data-role="footer" class="place-order-list-button" style="position:absolute; bottom:0px; left:0px; right:0px; overflow:hidden;">
-        <span class="d-inline-block" style="float: left; padding-bottom: 10px;">
-            <p>TOTAL <br/> <span class="price" style="color:#4CAF50;"><b>Rs. 800.00</b></span></p>
-        </span>
 
-        <span class="d-inline-block" style="float: right; padding-top:10px;">
-            <a href="../html/checkout.html" data-role="button" class="place-order-button" rel="external"><b>Place Order</b></a>
-        </span>
+
+        <div data-role="footer" data-position="fixed" role="contentinfo" class="ui-footer ui-bar-inherit ui-footer-fixed slideup">
+
+            <div class="place-order-list-button" style="position:absolute; bottom:42px; left:0px; right:0px; overflow:hidden;">
+                <span class="d-inline-block" style="float: left; padding-bottom: 10px;">
+                    <p>TOTAL <br/> <span class="price" style="color:#4CAF50;"><b>Rs. 832.00</b></span></p>
+                </span>
+
+                <span class="d-inline-block" style="float: right; padding-top:10px;">
+                    <a href="../html/checkout.html" data-role="button" class="place-order-button" rel="external"><b>Place Order</b></a>
+                </span>
+            </div>
+
+                <div data-role="navbar" class="ui-navbar" role="navigation">
+                    <ul class="ui-grid-d">
+                        <li class="ui-block-a"><a href="../html/home.html" class="ui-link ui-btn" rel="external"><i class="material-icons-outlined">home</i></a></li>
+                        <li class="ui-block-b"><a href="../html/search.html" class="ui-btn-active ui-state-persist ui-link ui-btn" rel="external"><i class="material-icons-outlined">search</i></a></li>
+                        <li class="ui-block-c"><a href="../html/cart.html" class="ui-link ui-btn" rel="external"><i class="material-icons-outlined">shopping_cart</i></a></li>
+                        <li class="ui-block-d"><a href="../html/profile.html" class="ui-link ui-btn" rel="external"><i class="material-icons-outlined">person_outline</i></a></li>
+                        <li class="ui-block-e"><a href="../html/more.html" class="ui-link ui-btn" rel="external"><i class="material-icons">list</i></a></li>
+                    </ul>
+                </div>
+                <h4 style="display:none;" class="ui-title" role="heading" aria-level="1">Footer</h4>
+            </div>
+
     </div>
-
-    </div>
-
 
     </body>
 
