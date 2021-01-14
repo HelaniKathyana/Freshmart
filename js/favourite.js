@@ -33,15 +33,15 @@ $(document).ready(function () {
         this.checked = true;
       });
       addAllselectedProducts();
-      $(".share-favourites").css('background-color', '#8CC63F');
-      $(".share-favourites").css('pointer-events', 'all');
+      $(".favourite-button").css('background-color', '#8CC63F');
+      $(".favourite-button").css('pointer-events', 'all');
     } else {
       $(':checkbox').each(function () {
         this.checked = false;
       });
       removeAllselectedProducts();
-      $(".share-favourites").css('background-color', '#1E1E1E');
-      $(".share-favourites").css('pointer-events', 'none');
+      $(".favourite-button").css('background-color', '#1E1E1E');
+      $(".favourite-button").css('pointer-events', 'none');
     }
   });
 
@@ -73,27 +73,27 @@ $(document).ready(function () {
     }
 
     if (selectedProducts.length > 0) {
-      $(".share-favourites").css('background-color', '#8CC63F');
-      $(".share-favourites").css('pointer-events', 'all');
+      $(".favourite-button").css('background-color', '#8CC63F');
+      $(".favourite-button").css('pointer-events', 'all');
     } else {
-      $(".share-favourites").css('background-color', '#1E1E1E');
-      $(".share-favourites").css('pointer-events', 'none');
+      $(".favourite-button").css('background-color', '#1E1E1E');
+      $(".favourite-button").css('pointer-events', 'none');
     }
   });
 
-  $(".share-favourites").click(function () {
+/*  $(".favourite-button").click(function () {
     document.getElementById("myModal").style.display = 'block';
-  });
+  });*/
 
   $("#share-btn").click(function () {
-    if ($("#email").val() == "") {
-      document.getElementById("error-text").style.display = 'block';
-    } else {
-      document.getElementById("myModal").style.display = 'none';
+  //  if ($("#email").val() == "") {
+  //    document.getElementById("error-text").style.display = 'block';
+  //  } else {
+  //    document.getElementById("myModal").style.display = 'none';
       console.log($("#email").val());
       localStorage.setItem("email", $("#email").val());
       sendEmail();
-    }
+  //  }
   });
 
   $("#close-btn").click(function () {
@@ -115,14 +115,14 @@ function displayFavourites() {
       for (j = 0; j < favouriteProducts.length; j++) {
 
         if (products[i].id == favouriteProducts[j]) {
-          output += '<div class="item-container">';
+          output += '<li><div class="item-container">';
           output += '<div class="card item-card">'
           output += '<div class="item-image-container" style="background-image: url(' + products[i].image + ')"></div>';
           output += '<div class="item-details"><div>';
           output += '<div class="item-header-container"><strong class="item-header-text"><b>' + products[i].name + '</b></strong></div>';
           output += '<div><p>' + products[i].details + '</p></div>';
           output += '<div><p><b>' + products[i].price + '</b></p></div>';
-          output += '<div class="favourite-product-details" style="position: absolute;top: 0;right: 0;color: #4CAF50; padding-top: 10px;"><label class="favourite-product-checkbox"><input type="checkbox" name="" id="productCheckBox" data-role="none"><span class="checkmark"></span></label></div><div class="favourite-icon" style="position: absolute;bottom: 0;right: 0;color: #4CAF50;"><div class="footer-action"> <i class="fas fa-heart" style="font-size: 24px;"></i></div></div></div></div></div>';
+          output += '<div class="favourite-product-details" style="position: absolute;top: 0;right: 0;color: #4CAF50; padding-top: 10px;"><label class="favourite-product-checkbox"><input type="checkbox" name="" id="productCheckBox" data-role="none"><span class="checkmark"></span></label></div><div class="favourite-icon" style="position: absolute;bottom: 0;right: 0;color: #4CAF50;"><div class="footer-action"> <i class="fas fa-heart" style="font-size: 24px;"></i></div></div></div></div></div></li>';
         }
       }
     }

@@ -9,58 +9,110 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
     <link rel="stylesheet" href="../library/materialize/css/materialize.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
     <link rel="stylesheet" href="../css/cards.css" />
     <link rel="stylesheet" href="../css/favourite.css" />
+    <link rel="stylesheet" href="../css/app.css"/>
+    <link rel="stylesheet" href="../css/header.css"/>
+    <link rel="stylesheet" href="../css/footer.css">
 
     <!-- Scripts -->
     <script src="../library/jquery/jquery-1.11.1.js"></script>
     <script src="../library/jquery/jquery.mobile-1.4.5.min.js"></script>
+
+    <Style>
+	.logo > img{
+	margin-left: auto;
+    margin-right: auto;
+	float:center;
+
+	}
+	</Style>
 </head>
 
 <body>
     <div data-role="page">
         <!-- HEADER -->
-        <div data-role="header" class="white">
-            <div class="container">
-<!--                <div class="header-icon">
-                    <div class="icon light" onclick ="location.href='profile.html'">
-                        <a href="" data-ajax="false" class="icon light">
-                            <i class="zmdi zmdi-chevron-left zmdi-hc-2x"></i>
-                        </a>
+<div data-role="header">
+                <div class="container">
+                    <div class="header-icon">
+                        <div class="icon">
+                            <a href="" data-ajax="false" class="icon">
+                                <i class="zmdi zmdi-chevron-left zmdi-hc-2x"></i>
+                            </a>
+                        </div>
+                    </div>
+					<div class="header-icon">
+                        <div class="icon">
+                            <a href="" data-ajax="false" class="icon">
+                                <i class="zmdi zmdi-sign-in zmdi-hc-2x"></i>
+                            </a>
+                        </div>
+                    </div>
+
+					<div class="heading">
+                        <div class="logo">
+						<img src="../images/logo color-01.png" style="width:80px;height:50px;margin: 5px;"><br>
+						</div>
+                    </div>
+
+					 <div class="header-icon">
+                        <div class="icon">
+                            <a href="" data-ajax="false" class="icon" >
+                                <i class="zmdi zmdi-search zmdi-hc-2x"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="header-icon">
+                        <div class="icon">
+                            <a href="" data-ajax="false" class="icon" >
+                                <i class="zmdi zmdi-shopping-cart zmdi-hc-2x"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="header-icon">
-                    <div class="icon light">
-                        <a data-ajax="false" class="icon light" onclick="sendEmail();event.stopPropagation()">
-                            <i class="material-icons">share</i>
-                        </a>
-                    </div>
-                </div>-->
             </div>
-        </div>
 
         <!-- CONTENT -->
         <div data-role="content" >
-            <div class="main-content" style="margin-top: 40px;">
+            <div class="main-content" style="margin-top: 50px;">
                <h4 style="text-align: center"> My Favourits</h4>
 
                 <label class="select-all-checkbox" style="padding-left: 10px;">
                       <input class="select-all" id="select-all" type="checkbox" data-role="none">
                 <span class="checkmark"> Select All </span> </label>
 
-                <div id="item-container" class="item-container">
+<!--                <ul id="item-container" class="item-container">
 
+                </ul>-->
+                <div class="products">
+                <ul class="item-container" id="item-container">
+                </ul>
                 </div>
 
-                    <div style="padding-top: 50px;"></div>
+                <div style="padding-top: 30px;"></div>
 
             </div>
         </div>
 
 
-    <div data-role="footer" class="favourite-list-button" style="position:absolute; bottom:0px; left:0px; right:0px; overflow:hidden;">
+<!--    <div data-role="footer" class="favourite-list-button" style="position:absolute; bottom:0px; left:0px; right:0px; overflow:hidden;">
         <a href="../html/share-favourite.html" data-role="button" class="favourite-button" rel="external"><b>Share Favourites</b></a>
-    </div>
+    </div>-->
+    <div data-role="footer" data-position="fixed" role="contentinfo" class="ui-footer ui-bar-inherit ui-footer-fixed slideup">
+            <a href="../html/share-favourite.html" data-role="button" class="favourite-button" rel="external" style="position:absolute; bottom: 42px; left:0px; right:0px; overflow:hidden;"><b>Share Favourites</b></a>
+                <div data-role="navbar" class="ui-navbar" role="navigation">
+                    <ul class="ui-grid-d">
+                        <li class="ui-block-a"><a href="#" class="ui-link ui-btn"><i class="material-icons-outlined">home</i></a></li>
+                        <li class="ui-block-b"><a href="#" class="ui-btn-active ui-state-persist ui-link ui-btn"><i class="material-icons-outlined">search</i></a></li>
+                        <li class="ui-block-c"><a href="#" class="ui-link ui-btn"><i class="material-icons-outlined">shopping_cart</i></a></li>
+                        <li class="ui-block-d"><a href="#" class="ui-link ui-btn"><i class="material-icons-outlined">person_outline</i></a></li>
+                        <li class="ui-block-e"><a href="#" class="ui-link ui-btn"><i class="material-icons">list</i></a></li>
+                    </ul>
+                </div>
+                <h4 style="display:none;" class="ui-title" role="heading" aria-level="1">Footer</h4>
+            </div>
 
     </div>
 
