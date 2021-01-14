@@ -13,6 +13,7 @@
     <!-- Scripts -->
     <script src="../library/jquery/jquery-1.11.1.js"></script>
     <script src="../library/jquery/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"/>
     </head>
 	<body>
 
@@ -44,7 +45,7 @@
                             <p><b>Prabath Bandara</b></p>
                         </div>
                         <span class="d-inline-block">No. 123. Sub Street, City Name, Province</span>
-                        <span class="d-inline-block" style="color: black; float: right;">
+                        <span class="d-inline-block" style="color: black; float: right;" id="newAddress">
                             <i class="fas fa-pen" style="font-size: 18px;"></i>
                         </span>
                     </div>
@@ -57,11 +58,11 @@
                         <div class="checkout-header-container">
                             <strong class="checkout-header-text"><b>PAYMENT METHOD</b></strong>
                         </div>
-                        <span class="d-inline-block" style="float: left;"><img src="G:/Documents/IIT Fourth Year/Semester 1/Mobile User Experience/Coursework 2/Freshmart/images/master.png"></span>
+                        <span class="d-inline-block" style="float: left;"><img src="../images/master.png"></span>
 
                         <span class="d-inline-block" style="padding-left: 20px;"> Master Card Ending  **16</span>
 
-                        <span class="d-inline-block" style="color: black; float: right;">
+                        <span class="d-inline-block" style="color: black; float: right;" id="newCard">
                             <i class="fas fa-angle-right" style="font-size: 20px;"></i>
                         </span>
                     </div>
@@ -78,21 +79,21 @@
                         <table>
                           <colgroup span="4"></colgroup>
                           <tr class="item-header-container">
-                            <td><img src="G:/Documents/IIT Fourth Year/Semester 1/Mobile User Experience/Coursework 2/Freshmart/images/hotdog.png"></td>
+                            <td><img src="../images/hotdog.png"></td>
                             <td>Hot Dog Bun<br>Rs. 100.00</td>
                             <td><i class="fas fa-minus-square" style="font-size: 20px; color: #FFD314; padding-right: 10px;"></i>
                             <span style="font-size: 20px;">1</span>
                             <i class="fas fa-plus-square" style="font-size: 20px; color: #FFD314;padding-left: 10px;"></i></td>
                           </tr>
                           <tr class="item-header-container">
-                            <td><img src="G:/Documents/IIT Fourth Year/Semester 1/Mobile User Experience/Coursework 2/Freshmart/images/InguruBiscuit.png"></td>
+                            <td><img src="../images/InguruBiscuit.png"></td>
                             <td>Maliban Inguru Biscuit<br>Rs. 120.00</td>
                             <td><i class="fas fa-minus-square" style="font-size: 20px; color: #FFD314; padding-right: 10px;"></i>
                             <span style="font-size: 20px;">1</span>
                             <i class="fas fa-plus-square" style="font-size: 20px; color: #FFD314;padding-left: 10px;"></i></td>
                           </tr>
                           <tr class="item-header-container">
-                            <td><img src="G:/Documents/IIT Fourth Year/Semester 1/Mobile User Experience/Coursework 2/Freshmart/images/PepsiCan.png"></td>
+                            <td><img src="../images/PepsiCan.png"></td>
                             <td>Pepsi Can<br>Rs. 500.00</td>
                             <td><i class="fas fa-minus-square" style="font-size: 20px; color: #FFD314; padding-right: 10px;"></i>
                             <span style="font-size: 20px;">1</span>
@@ -136,11 +137,21 @@
         </span>
 
         <span class="d-inline-block" style="float: right; padding-top:10px;">
-            <a href="../html/share-favourite.html" data-role="button" class="place-order-button"><b>Place Order</b></a>
+            <a href="../html/payment.html" data-role="button" class="place-order-button"><b>Place Order</b></a>
         </span>
     </div>
 
     </div>
+
+    <script type="text/javascript">
+    document.getElementById("newAddress").onclick = function () {
+        location.href = "../html/add-new-address.html";
+    };
+
+    document.getElementById("newCard").onclick = function () {
+        location.href = "../html/payment-method.html";
+    };
+    </script>
 
     </body>
 
