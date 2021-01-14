@@ -133,3 +133,35 @@ span.price {
   font-family: "Raleway";
 }
 
+/*Payment method page*/
+form .row {
+    margin: 0;
+    overflow: hidden
+}
+
+form .row-1 {
+    border: 1px solid rgba(0, 0, 0, 0.137);
+    padding: 0.5rem;
+    outline: none;
+    width: 100%;
+    min-width: unset;
+    border-radius: 5px;
+    background-color: white;
+    border-color: rgba(221, 228, 236, 0.459);
+    margin: 2vh 0;
+    overflow: hidden
+}
+
+form .row .col-2,
+.col-7,
+.col-3 {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 0 1vh
+}
+
+form .row .col-2 {
+    padding-right: 0
+}
+
