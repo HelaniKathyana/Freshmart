@@ -54,6 +54,13 @@ function displaySelectedItems(selectedItems) {
     document.getElementById("subtotal").innerText = `${subTotal.toFixed(2)}`;
     document.getElementById("total").innerText = total;
     document.getElementById("total2").innerHTML = `<b> Rs ${total}</b>`
-
+    let orderSummary = {
+        subTotal: subTotal,
+        discount: discount,
+        delivery: delivery,
+        total: total
+    }
+    orderSummary = JSON.stringify(orderSummary);
+    localStorage.setItem("orderSummary", orderSummary);
 }
 
