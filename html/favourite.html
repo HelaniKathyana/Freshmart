@@ -15,7 +15,6 @@
     <!-- Scripts -->
     <script src="../library/jquery/jquery-1.11.1.js"></script>
     <script src="../library/jquery/jquery.mobile-1.4.5.min.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"/>
 </head>
 
 <body>
@@ -138,10 +137,76 @@
 
 
     <div data-role="footer" class="favourite-list-button" style="position:absolute; bottom:0px; left:0px; right:0px; overflow:hidden;">
-        <a href="../html/share-favourite.html" data-role="button" class="favourite-button"><b>Share Favourites</b></a>
+        <a href="../html/share-favourite.html" data-role="button" class="favourite-button" rel="external"><b>Share Favourites</b></a>
     </div>
 
     </div>
+
+    <script>
+    	var chance;
+        var favorites;
+        var storage;
+
+			$(document).ready(function() {
+			  chance = new Chance(); // Just for random hash generation
+			  if (window.Storage != undefined) {
+			    storage = window.localStorage;
+			    if (storage.favorites == undefined) {
+			      favorites = [];
+			    } else {
+			      favorites = JSON.parse(storage.favorites);
+			    }
+			    updateList();
+
+			    $('#fav').click(function() {
+			      addFavorite(window.location);
+			      updateList();
+			    });
+
+			    $('#list').on('click', 'li a', function() {
+			      deleteFavorite($(this).data('id'));
+			      updateList();
+			    });
+			  } else {
+			    // No support for local storage
+			    // Fall back to cookies or session based storage
+			  }
+			});
+
+			function addFavorite(url) {
+			  favorites.push({
+			    id: chance.hash({
+			      length: 15
+			    }),
+			    url: url
+			  });
+			  storage.setItem('favorites', JSON.stringify(favorites));
+			}
+
+			function deleteFavorite(id) {
+			  for (var i in favorites) {
+			    if (favorites[i].id == id) {
+			      favorites.splice(i, 1);
+			    }
+			  }
+			  storage.setItem('favorites', JSON.stringify(favorites));
+			}
+
+			function updateList() {
+			  $('#list').empty();
+			  if (typeof favorites !== 'undefined' && favorites.length > 0) {
+			    for (var i in favorites) {
+			      $('#list').append('<li>' +
+			        favorites[i].url.href +
+			        '&nbsp;&nbsp;&nbsp;&nbsp;' +
+			        '<a class="delete" href="#" data-id="' + favorites[i].id + '">delete</a>' +
+			        '</li>');
+			    }
+			  } else {
+			    $('#list').append('<li>Nothing stored!</li>');
+			  }
+			}
+    </script>
 </body>
 
 </html>
