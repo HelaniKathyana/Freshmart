@@ -1,0 +1,252 @@
+/i-phone style/
+.product-image-iphone,
+.product-info-iphone,
+.product-description-iphone,
+.comment-section-iphone {
+  margin: 5%;
+}
+
+.product-image-iphone img {
+  width: 100%;
+  padding: 3%;
+}
+
+.product-info-iphone,
+.comment-section-iphone {
+  background-color: #f7f7f7;
+  padding: 3%;
+  border-radius: 1em;
+}
+
+.product-info-iphone {
+  color: black;
+}
+
+.comment-details-iphone {
+  padding: 2%;
+  box-shadow: 0 0 8px 5px rgba(33, 22, 22, 0.1);
+}
+
+.rating-heading,
+.description-heading,
+.product-price {
+  color: black;
+}
+
+.heart-iphone {
+  width: 10%;
+  margin-top: 8%;
+  margin-left: 90%;
+}
+
+.add-comment-iphone > .ui-btn {
+  background-color: white;
+  color: grey;
+  text-align: left;
+  font-family: "Open Sans";
+  font-size: 15px;
+  margin-top: -3%;
+}
+
+#popupComment {
+  border-radius: 2em 0 2em 0 !important ;
+}
+.popup-heading {
+  text-align: center;
+  font-family: Proza Libre;
+  background-color: #cfe8ae !important;
+  padding: 5% !important;
+  height: 15px !important;
+  margin-top: -5%;
+  border-radius: 2em 0 0 0 !important ;
+}
+
+.popup-heading h2 {
+  margin-top: -1.5%;
+}
+
+.rating-section {
+  padding: 5%;
+}
+
+#popup-textarea {
+  height: 80px !important;
+  border-radius: 1em 0 1em 0 !important;
+  box-shadow: 0 0 8px 5px rgba(33, 22, 22, 0.1) !important;
+  background-color: white !important;
+  font-size: 12;
+  font-family: "Open Sans";
+  margin-top: -3% !important;
+}
+
+.comment-btn > button {
+  background-color: #8cc63f !important;
+  color: white !important;
+  font-family: "Proza Libre Regular" !important;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 2em 0 2em 0 !important;
+  box-shadow: 0 0 8px 5px rgba(33, 22, 22, 0.1);
+  height: 20%;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.comment-details-iphone img {
+  width: 50%;
+}
+
+.avatar-iphone {
+  width: 40% !important;
+}
+
+.avatar-iphone img {
+  margin-top: 2% !important;
+}
+
+.user-name-iphone {
+  font-family: "Open Sans" !important;
+  font-size: 18px !important;
+}
+
+.user-comment-iphone {
+  font-family: "PT Serif" !important;
+  font-style: italic;
+  font-size: 11px !important;
+  color: #8cc63f;
+}
+
+/i-pad styles/
+
+#ipad-grid {
+  display: none;
+}
+
+.comment-section {
+  background-color: #f7f7f7;
+}
+
+.ipad-column1 {
+  padding: 4%;
+}
+
+.ipad-column2 {
+  padding-top: 1%;
+  padding-right: 4%;
+}
+.ipad-column1 img {
+  margin-top: 13%;
+  width: 100%;
+}
+
+.rating-heading {
+  text-align: center;
+}
+
+.ui-btn.comment-btn-ipad {
+  align-items: center;
+  background-color: #8cc63f;
+  color: white;
+  font-family: "Proza Libre Regular";
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 2em 0 2em 0 !important;
+  box-shadow: 0 0 8px 5px rgba(33, 22, 22, 0.1);
+  height: 20%;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.comment-display-grid1 {
+  width: 40% !important;
+}
+
+.comment-details-ipad img {
+  width: 50%;
+}
+
+.avatar-ipad {
+  width: 40% !important;
+}
+
+.avatar-ipad img {
+  margin-top: 2% !important;
+}
+
+.user-name-ipad {
+  font-family: "Open Sans" !important;
+  font-size: 18px !important;
+}
+
+.user-comment-ipad {
+  font-family: "PT Serif" !important;
+  font-style: italic;
+  font-size: 11px !important;
+  color: #8cc63f;
+}
+
+.heart {
+  margin-top: 13%;
+  margin-left: 90%;
+  width: 10%;
+}
+
+#ipad-textarea {
+  height: 80px !important;
+  border-radius: 1em 0 1em 0 !important;
+  box-shadow: 0 0 8px 5px rgba(33, 22, 22, 0.1) !important;
+  background-color: white !important;
+  font-size: 12;
+  font-family: "Open Sans";
+  margin-top: -3% !important;
+}
+
+@media (min-width: 667px) {
+  #iphone-grid {
+    display: none;
+  }
+
+  #ipad-grid {
+    display: block;
+  }
+
+  .ipad-column1 img {
+    margin-top: 17%;
+  }
+
+  .heart {
+    margin-top: 11%;
+  }
+}
+
+@media (min-width: 768px) {
+  #iphone-grid {
+    display: none;
+  }
+
+  #ipad-grid {
+    display: block;
+  }
+
+  .ipad-column1 img {
+    margin-top: 17%;
+  }
+}
+
+@media (min-width: 1024px) {
+  #iphone-grid {
+    display: none;
+  }
+
+  #ipad-grid {
+    display: block;
+  }
+
+  .ipad-column1 img {
+    margin-top: -3%;
+  }
+
+  .heart {
+    margin-top: 8%;
+  }
+}

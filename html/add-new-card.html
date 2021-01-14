@@ -31,10 +31,10 @@
                         <input id="text" data-input-style="box" data-label-style="stacked" placeholder="Cardholder Name"/>
                     </label>
 
-                    <label>
-                        <input type="number" placeholder="MM/YY" maxlength="2" id="yearMonth"
-                        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"/>
-                    </label>
+                     <div>
+                          <label for="date"></label>
+                          <input type="text" id="date" placeholder="MM / YY" />
+                     </div>
 
                     <label>
                         <input type="number" placeholder="Security Code (CVV)" maxlength="3" id="cvv"
