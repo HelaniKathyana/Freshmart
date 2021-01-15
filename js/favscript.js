@@ -33,15 +33,15 @@ $(document).ready(function () {
         this.checked = true;
       });
       addAllselectedProducts();
-      $(".favourite-button").css('background-color', '#8CC63F');
-      $(".favourite-button").css('pointer-events', 'all');
+      $(".share-favourites").css('background-color', '#4caf50');
+      $(".share-favourites").css('pointer-events', 'all');
     } else {
       $(':checkbox').each(function () {
         this.checked = false;
       });
       removeAllselectedProducts();
-      $(".favourite-button").css('background-color', '#4caf50');
-      $(".favourite-button").css('pointer-events', 'none');
+      $(".share-favourites").css('background-color', '#D4D4D4');
+      $(".share-favourites").css('pointer-events', 'none');
     }
   });
 
@@ -73,27 +73,27 @@ $(document).ready(function () {
     }
 
     if (selectedProducts.length > 0) {
-      $(".favourite-button").css('background-color', '#8CC63F');
-      $(".favourite-button").css('pointer-events', 'all');
+      $(".share-favourites").css('background-color', '#4caf50');
+      $(".share-favourites").css('pointer-events', 'all');
     } else {
-      $(".favourite-button").css('background-color', '#1E1E1E');
-      $(".favourite-button").css('pointer-events', 'none');
+      $(".share-favourites").css('background-color', '#D4D4D4');
+      $(".share-favourites").css('pointer-events', 'none');
     }
   });
 
-/*  $(".favourite-button").click(function () {
+  $(".share-favourites").click(function () {
     document.getElementById("myModal").style.display = 'block';
-  });*/
+  });
 
   $("#share-btn").click(function () {
-  //  if ($("#email").val() == "") {
-  //    document.getElementById("error-text").style.display = 'block';
-  //  } else {
-  //    document.getElementById("myModal").style.display = 'none';
+    if ($("#email").val() == "") {
+      document.getElementById("error-text").style.display = 'block';
+    } else {
+      document.getElementById("myModal").style.display = 'none';
       console.log($("#email").val());
       localStorage.setItem("email", $("#email").val());
       sendEmail();
-  //  }
+    }
   });
 
   $("#close-btn").click(function () {
@@ -115,19 +115,18 @@ function displayFavourites() {
       for (j = 0; j < favouriteProducts.length; j++) {
 
         if (products[i].id == favouriteProducts[j]) {
-          output += '<div class="item-container">';
-          output += '<div class="card item-card">'
-          output += '<div class="item-image-container" style="background-image: url(' + products[i].image + ')"></div>';
-          output += '<div class="item-details"><div>';
-          output += '<div class="item-header-container"><strong class="item-header-text"><b>' + products[i].name + '</b></strong></div>';
-          output += '<div><p>' + products[i].details + '</p></div>';
-          output += '<div><p><b>' + products[i].price + '</b></p></div>';
-          output += '<div class="favourite-product-details" style="position: absolute;top: 0;right: 0;color: #4CAF50; padding-top: 10px;"><label class="favourite-product-checkbox"><input type="checkbox" name="" id="productCheckBox" data-role="none"><span class="checkmark"></span></label></div><div class="favourite-icon" style="position: absolute;bottom: 0;right: 0;color: #4CAF50;"><div class="footer-action"> <i class="fas fa-heart" style="font-size: 24px;"></i></div></div></div></div></div>';
+          output += '<li><div class="favourite-product">';
+          output += '<div class="favourite-product-images"> <img class="favourite-product-image" src="' + products[i].image + '"> </div>';
+          output += '<div class="favourite-product-details"><label class="favourite-product-checkbox"><input type="checkbox" name="' + products[i].id + '" id="productCheckBox" data-role="none"><span class="checkmark"></span></label>';
+          output += '<p class="favourite-product-name">' + products[i].name + '</p>';
+          output += '<p class="favourite-product-detail">' + products[i].details + '</p>';
+          output += '<p class="favourite-product-price">' + products[i].price + '</p>';
+          output += '<img class="favourite-icon-fill" src="../images/heartFill.png" style="margin-left: 120px;"></div></div></div></li>';
         }
       }
     }
   }
-  document.getElementById("item-container").innerHTML = output;
+  document.getElementById("favourite-products").innerHTML = output;
 }
 
 function addAllselectedProducts() {
@@ -178,7 +177,7 @@ function sendEmail() {
     email: localStorage.getItem("email")
   };
 
-  emailjs.send('service_3q50ful', 'template_gdvol4w', templateParams, 'user_uOok8WDddCFtXaYtxYn5D')
+  emailjs.send('service_8h5txmh', 'template_m4uanv6', templateParams, 'user_xVKaCP8VQbdWnbIDxs7HC')
     .then(function (response) {
       console.log('SUCCESS!', response.status, response.text);
       showSuccessToast();
@@ -200,7 +199,7 @@ function getEmailBody() {
 
         if (products[i].id == selectedProducts[j]) {
           output += `<tr style="border-collapse:collapse"><td align="left" style="Margin:0;padding-top:20px;padding-bottom:20px;padding-left:20px;padding-right:20px"><!--[if mso]><table style="width:560px" cellpadding="0" cellspacing="0"><tr><td style="width:270px" valign="top"><![endif]--><table cellpadding="0" cellspacing="0" class="es-left" align="left" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:left"><tr style="border-collapse:collapse"><td class="es-m-p20b" align="left" style="padding:0;Margin:0;width:270px"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"><tr style="border-collapse:collapse">`;
-          output += `<td align="center" style="padding:0;Margin:0;font-size:0"><img src="` + products[i].url + `" alt="` + products[i].name + `" class="adapt-img" title="` + products[i].name + `" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="165" height="132"></td></tr></table></td></tr></table>`;
+          output += `<td align="center" style="padding:0;Margin:0;font-size:0"><img src="` + products[i].image + `" alt="` + products[i].name + `" class="adapt-img" title="` + products[i].name + `" style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic" width="165" height="132"></td></tr></table></td></tr></table>`;
           output += `<!--[if mso]></td><td style="width:20px"></td><td style="width:270px" valign="top"><![endif]--><table cellpadding="0" cellspacing="0" class="es-right" align="right" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:right"><tr style="border-collapse:collapse"><td align="left" style="padding:0;Margin:0;width:270px"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"><tr style="border-collapse:collapse">`;
           output += `<td align="left" style="padding:0;Margin:0"><h3 style="Margin:0;line-height:22px;mso-line-height-rule:exactly;font-family:'source sans pro', 'helvetica neue', helvetica, arial, sans-serif;font-size:18px;font-style:normal;font-weight:bold;color:#333333"><strong>` + products[i].name + `</strong></h3></td></tr>`;
           output += `<tr style="border-collapse:collapse"><td align="center" height="18" style="padding:0;Margin:0"></td></tr>`;
