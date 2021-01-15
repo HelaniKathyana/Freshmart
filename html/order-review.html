@@ -38,57 +38,19 @@
                 <div style="padding-left:20px; padding-right:20px;">
 
                     <div id="inline-summary">
-                        <div class="summary">
-                            <div><b>Summary :</b></div>
-                            <div>Order # : 4444</div>
-                            <div>Order Date : October 25,2020</div>
-                            <div>Order Total : Rs. 800.00</div>
-                        </div>
-                        <div class="address ">
-                            <div><b>Delivery Address :</b></div>
-                            <div>Mr. Prabath Bandara</div>
-                            <div>1234 , Prince Lane</div>
-                            <div>Kelaniya , Gampaha</div>
-                        </div>
                     </div>
-
-                    <table>
-                      <colgroup span="4"></colgroup>
-                      <tr>
-                        <th colspan="2">Items Delivered</th>
-                        <th>QTY</th>
-                        <th>Price</th>
-                      </tr>
-                      <tr>
-                        <td><img src="../images/hotdog.png"></td>
-                        <td>Hot Dog Bun</td>
-                        <td>1</td>
-                        <td>Rs. 100.00</td>
-                      </tr>
-                      <tr>
-                        <td><img src="../images/InguruBiscuit.png"></td>
-                        <td>Maliban Inguru Biscuit</td>
-                        <td>2</td>
-                        <td>Rs. 120.00</td>
-                      </tr>
-                      <tr>
-                        <td><img src="../images/PepsiCan.png"></td>
-                        <td>Pepsi Can</td>
-                        <td>2</td>
-                        <td>Rs. 500.00</td>
-                      </tr>
-                    </table>
+                    <div id="orderedItemView"></div>
 
                     <div class="payment-container">
-                      <p>Subtotal <span class="price">$15</span></p>
-                      <p>Discount <span class="price">$5</span></p>
-                      <p>Delivery <span class="price">$8</span></p>
-                      <hr>
-                      <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
+                        <p>Subtotal <span id="subtotal" class="price"></span></p>
+                        <p>Discount <span id="discount" class="price">5%</span></p>
+                        <p>Delivery <span id="delivery" class="price">300.00</span></p>
+                        <hr>
+                        <p>Total <span id="total" class="price" style="color:black"><b></b></span></p>
                     </div>
 
                     <div class=" button-container" style="margin-top: 20px;">
-                       <a href="../html/home.html" data-role="button" class="payment-button" rel="external">Done</a>
+                       <button type="button" onclick="clearData()" class="payment-button">Done</button>
                     </div>
                 </div>
                 <div>
@@ -98,6 +60,7 @@
             </div>
         </div>
     </div>
-
+        <script type="text/javascript" src="../data/products.json" ></script>
+        <script type="text/javascript" src="../js/order-review.js" ></script>
     </body>
 </html>

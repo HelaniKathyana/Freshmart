@@ -1,3 +1,5 @@
+let buyerAddress;
+
 $(document).ready(function () {
     //###############need to remove after complete previous view
     let itemArray = ["product2", "product4", "product5"];
@@ -8,15 +10,65 @@ $(document).ready(function () {
     //Code Segment started from here
     let products = JSON.parse(data);
 
-
     //get selected items for checkout
     let selectedItems = localStorage.getItem("selectedItems");
     selectedItems = JSON.parse(selectedItems);
     selectedItems = getSelectedItemObjectArray(selectedItems, products);
     console.log(selectedItems)
+    if (JSON.parse(localStorage.getItem("buyer"))){
+        displayAddress();
+    } else {
+        document.getElementById("displayAddress").style.display = "none"
+        document.getElementById("editAddress").style.display = "block"
+    }
     displaySelectedItems(selectedItems);
 
 });
+
+function toggleEditAddress() {
+    let buyer = JSON.parse(localStorage.getItem("buyer"))
+
+    document.forms["address_form"]["name"].value = buyer.name;
+    document.forms["address_form"]["address"].value = buyer.address;
+    document.forms["address_form"]["street"].value = buyer.street;
+    document.forms["address_form"]["city"].value = buyer.city;
+    document.forms["address_form"]["postalCode"].value = buyer.postalCode;
+
+    document.getElementById("editAddress").style.display = "block"
+    document.getElementById("displayAddress").style.display = "none"
+}
+
+function editAddress() {
+    let name = document.forms["address_form"]["name"].value;
+    let address = document.forms["address_form"]["address"].value;
+    let street = document.forms["address_form"]["street"].value;
+    let city = document.forms["address_form"]["city"].value;
+    let postalCode = document.forms["address_form"]["postalCode"].value;
+    let buyerDetails = {
+        name: name,
+        address: address,
+        street: street,
+        city: city,
+        postalCode: postalCode
+    }
+    localStorage.setItem("buyer",JSON.stringify(buyerDetails));
+    buyerAddress = buyerDetails;
+    displayAddress();
+}
+
+function displayAddress(){
+    document.getElementById("editAddress").style.display = "none"
+    let buyer = JSON.parse(localStorage.getItem("buyer"))
+    buyerAddress = buyer;
+    let address = `<span class="d-inline-block"><br><b>${buyer.name}</b>
+                            <br>
+                            ${buyer.address} <br> ${buyer.street} <br> ${buyer.city} <br>Postal Code: ${buyer.postalCode}</span>
+                            <span class="d-inline-block" style="color: black; float: right;" id="newAddress">
+                                <i onclick="toggleEditAddress()" class="fas fa-pen" style="font-size: 18px;"></i>
+                            </span>`;
+    document.getElementById("displayAddress").innerHTML = address;
+    document.getElementById("displayAddress").style.display = "block"
+}
 
 function getSelectedItemObjectArray(selectedItem, products) {
     let itemArray = [];
@@ -58,7 +110,9 @@ function displaySelectedItems(selectedItems) {
         subTotal: subTotal,
         discount: discount,
         delivery: delivery,
-        total: total
+        total: total,
+        buyer: buyerAddress,
+        orderDate: new Date()
     }
     orderSummary = JSON.stringify(orderSummary);
     localStorage.setItem("orderSummary", orderSummary);

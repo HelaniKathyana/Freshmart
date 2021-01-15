@@ -13,6 +13,11 @@
     <!-- Scripts -->
     <script src="../library/jquery/jquery-1.11.1.js"></script>
     <script src="../library/jquery/jquery.mobile-1.4.5.min.js"></script>
+
+    <!-- load stripe gateway -->
+        <!-- Load Stripe.js on your website. -->
+        <script src="https://js.stripe.com/v3/"></script>
+<!--        <script src="//js.stripe.com/v2/"></script>-->
     </head>
 	<body>
 
@@ -50,7 +55,7 @@
                     </div>
 
                     <div class=" button-container">
-                       <a href="../html/order-confirmation.html" data-role="button" class="payment-button" rel="external">Pay Now</a>
+<!--                       <a href="../html/order-confirmation.html" data-role="button" class="payment-button" rel="external">Pay Now</a>-->
                     </div>
                 </div>
                 <div>
@@ -59,6 +64,15 @@
 
             </div>
         </div>
+            <div style="padding-left: 20px; padding-right: 20px">
+                <form id="payment-form" action="order-confirmation.html" method="POST">
+                    <script id="stripe-script" src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                            data-key="pk_test_LACZeAF8IKmp21kRyEiMi0dn"  data-name="FreshMart"
+                            data-description="Quality Products"
+                            data-image="https://stripe.com/img/documentation/checkout/marketplace.png" data-locale="auto">
+                    </script>
+                </form>
+            </div>
     </div>
         <script type="text/javascript" src="../data/products.json" ></script>
         <script type="text/javascript" src="../js/payment.js" ></script>
