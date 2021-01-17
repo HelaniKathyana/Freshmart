@@ -1,136 +1,163 @@
 /*prograss bar*/
-.container{
-  width: 100%;
-  position: absolute;
-  z-index: 1;
-  margin-top: 20px;
-  margin-left: 10%;
-  margin-right: 10%;
+.progressbar-container {
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    margin-top: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
 }
-.progressbar{
-  counter-reset: step;
+
+.progressbar {
+    counter-reset: step;
 }
-.progressbar li{
-  float: left;
-  width: 20%;
-  position: relative;
-  text-align: center;
+
+.progressbar li {
+    float: left;
+    width: 20%;
+    position: relative;
+    text-align: center;
 }
-.progressbar li:before{
-  content:counter(step);
-  counter-increment: step;
-  width: 30px;
-  height: 30px;
-  border: 2px solid #D4D4D4;
-  display: block;
-  margin: 0 auto 10px auto;
-  border-radius: 50%;
-  line-height: 27px;
-  background: white;
-  color: black;
-  text-align: center;
-  font-weight: bold;
+
+.progressbar li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #D4D4D4;
+    display: block;
+    margin: 0 auto 10px auto;
+    border-radius: 50%;
+    line-height: 27px;
+    background: white;
+    color: black;
+    text-align: center;
+    font-weight: bold;
 }
-.progressbar li:after{
-  content: '';
-  position: absolute;
-  width:100%;
-  height: 3px;
-  background: #D4D4D4;
-  top: 15px;
-  left: -50%;
-  z-index: -1;
+
+.progressbar li:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #D4D4D4;
+    top: 15px;
+    left: -50%;
+    z-index: -1;
 }
-.progressbar li.active:before{
- border-color: #4CAF50;
- background: #4CAF50;
- color: black;
+
+.progressbar li.active:before {
+    border-color: #4CAF50;
+    background: #4CAF50;
+    color: black;
 }
-.progressbar li.active:after{
- background: #4CAF50;
+
+.progressbar li.active:after {
+    background: #4CAF50;
 }
-.progressbar li.active - li:after{
- background: #4CAF50;
+
+.progressbar li.active
+
+-
+li:after {
+    background: #4CAF50;
 }
-.progressbar li.active - li:before{
-border-color: #4CAF50;
-background: #4CAF50;
-color: black;
+
+.progressbar li.active
+
+-
+li:before {
+    border-color: #4CAF50;
+    background: #4CAF50;
+    color: black;
 }
-.progressbar li:first-child:after{
- content: none;
+
+.progressbar li:first-child:after {
+    content: none;
 }
 
 /*Order Confirmation Page Image*/
-.order{
+.order {
     padding-top: 120px;
     text-align: center;
 }
 
 /*Payment Page Image*/
-.payment{
+.payment {
     text-align: center;
 }
 
 /*Order Review Page Image*/
-.order-review{
+.order-review {
     padding-top: 100px;
     text-align: center;
 }
 
 /*Payment Container*/
-.payment-container{
-  padding: 5px 20px 0px 20px;
+.payment-container {
+    padding: 5px 20px 0px 20px;
 }
 
 span.price {
-  float: right;
+    float: right;
 }
 
 /*Order Review Summary*/
-#inline-summary{width:100%;height:auto;background-color:#707070;display:flex;}
-.summary,.address{width:50%;height:110px;background-color:#D4D4D4;margin:1px; padding-left:5px;}
-
-/*Checkout Container*/
-.checkout-container{
-  padding: 5px 10px 10px 10px;
-  border: 1px solid #707070;
-  border-radius: 3px;
-  margin-left: 10px;
-  margin-right: 10px;
+#inline-summary {
+    width: 100%;
+    height: auto;
+    background-color: #707070;
+    display: flex;
 }
 
-.promo-container{
-  padding: 5px 10px 10px 10px;
-  margin-left: 10px;
-  margin-right: 10px;
+.summary, .address {
+    width: 50%;
+    height: 110px;
+    background-color: #D4D4D4;
+    margin: 1px;
+    padding-left: 5px;
+}
+
+/*Checkout Container*/
+.checkout-container {
+    padding: 5px 10px 10px 10px;
+    border: 1px solid #707070;
+    border-radius: 3px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.promo-container {
+    padding: 5px 10px 10px 10px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .payment-button {
-  width: 100% !important;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-family: "Raleway";
+    width: 100% !important;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-family: "Raleway";
 }
 
 /*Place order button*/
 .place-order-list-button {
-  padding-right: 20px;
-  padding-left: 20px;
-  border: none;
-  background-color: white;
-  position: fixed !important;
+    padding-right: 20px;
+    padding-left: 20px;
+    border: none;
+    background-color: white;
+    position: fixed !important;
 }
 
 .place-order-button {
-  width: 100% !important;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-family: "Raleway";
+    width: 100% !important;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-family: "Raleway";
 }
 
 /*Payment method page*/
@@ -164,5 +191,3 @@ form .row .col-2,
 form .row .col-2 {
     padding-right: 0
 }
-
-

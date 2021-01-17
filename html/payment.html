@@ -1,80 +1,151 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
+<head>
     <title>Freshmart</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <link rel="stylesheet" href="../library/fontawesome/css/all.min.css" />
-    <link rel="stylesheet" href="../library/jquery/jquery.mobile.structure-1.4.5.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" href="../library/fontawesome/css/all.min.css"/>
+    <link rel="stylesheet" href="../library/jquery/jquery.mobile.structure-1.4.5.min.css"/>
     <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
-    <link rel="stylesheet" href="../library/materialize/css/materialize.min.css" />
-    <link rel="stylesheet" href="../css/payment.css" />
+          href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="../library/materialize/css/materialize.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../css/payment.css"/>
+    <link rel="stylesheet" href="../css/footer.css"/>
+    <link rel="stylesheet" href="../css/header.css"/>
+    <link rel="stylesheet" href="../css/app.css"/>
 
     <!-- Scripts -->
     <script src="../library/jquery/jquery-1.11.1.js"></script>
     <script src="../library/jquery/jquery.mobile-1.4.5.min.js"></script>
 
+
     <!-- load stripe gateway -->
-        <!-- Load Stripe.js on your website. -->
-        <script src="https://js.stripe.com/v3/"></script>
-<!--        <script src="//js.stripe.com/v2/"></script>-->
-    </head>
-	<body>
+    <!-- Load Stripe.js on your website. -->
+    <script src="https://js.stripe.com/v3/"></script>
 
-	    <div data-role="page">
-        <div role="content">
+</head>
+<body>
 
-            <div class="main-content">
-                <div class="root">
-                 <div class="container">
-                      <ul class="progressbar">
+<div data-role="page">
+
+    <div data-role="header">
+        <div class="container">
+            <div class="header-icon">
+                <div class="icon">
+                    <a href="" data-ajax="false" class="icon">
+                        <i class="zmdi zmdi-chevron-left zmdi-hc-2x"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="header-icon">
+                <div class="icon">
+                    <a href="" data-ajax="false" class="icon">
+                        <i class="zmdi zmdi-sign-in zmdi-hc-2x"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="heading">
+                <div class="logo">
+                    <img src="../images/logo color-01.png" style="width:80px;height:50px;margin: 5px;"><br>
+                </div>
+            </div>
+
+            <div class="header-icon">
+                <div class="icon">
+                    <a href="" data-ajax="false" class="icon">
+                        <i class="zmdi zmdi-search zmdi-hc-2x"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="header-icon">
+                <div class="icon">
+                    <a href="" data-ajax="false" class="icon">
+                        <i class="zmdi zmdi-shopping-cart zmdi-hc-2x"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div role="content">
+
+        <div class="main-content" style="margin-top: 50px;">
+            <div class="root">
+                <div class="progressbar-container">
+                    <ul class="progressbar">
                         <li class="active">Checkout</li>
                         <li class="active">Confirm</li>
                         <li>Success</li>
                         <li>Order Review</li>
-                      </ul>
-                  </div>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="padding-left:20px; padding-top: 100px;">
+                <h3>Payment</h3>
+            </div>
+
+            <div class="payment">
+                <img src="../images/visa.png">
+            </div>
+
+            <div style="padding-left:20px; padding-right:20px; padding-top: 10px;">
+
+                <div class="payment-container">
+                    <p>Subtotal <span id="subtotal" class="price">$15</span></p>
+                    <p>Discount <span id="discount" class="price">$5</span></p>
+                    <p>Delivery <span id="delivery" class="price">$8</span></p>
+                    <hr>
+                    <p>Total <span id="total" class="price" style="color:black"><b>$30</b></span></p>
                 </div>
 
-                <div style="padding-left:20px; padding-top: 100px;">
-                    <h3>Payment</h3>
+                <div class=" button-container">
+                    <!--                       <a href="../html/order-confirmation.html" data-role="button" class="payment-button" rel="external">Pay Now</a>-->
                 </div>
-
-                <div class="payment">
-                    <img src="../images/visa.png">
-                </div>
-
-                <div style="padding-left:20px; padding-right:20px; padding-top: 10px;">
-
-                    <div class="payment-container">
-                      <p>Subtotal <span id="subtotal" class="price">$15</span></p>
-                      <p>Discount <span id="discount" class="price">$5</span></p>
-                      <p>Delivery <span id="delivery" class="price">$8</span></p>
-                      <hr>
-                      <p>Total <span id="total" class="price" style="color:black"><b>$30</b></span></p>
-                    </div>
-
-                    <div class=" button-container">
-<!--                       <a href="../html/order-confirmation.html" data-role="button" class="payment-button" rel="external">Pay Now</a>-->
-                    </div>
-                </div>
-                <div>
-
-                </div>
+            </div>
+            <div>
 
             </div>
+
         </div>
-            <div style="padding-left: 20px; padding-right: 20px">
-                <form id="payment-form" action="order-confirmation.html" method="POST">
-                    <script id="stripe-script" src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                            data-key="pk_test_LACZeAF8IKmp21kRyEiMi0dn"  data-name="FreshMart"
-                            data-description="Quality Products"
-                            data-image="https://stripe.com/img/documentation/checkout/marketplace.png" data-locale="auto">
-                    </script>
-                </form>
-            </div>
     </div>
-        <script type="text/javascript" src="../data/products.json" ></script>
-        <script type="text/javascript" src="../js/payment.js" ></script>
-    </body>
+    <div style="padding-left: 20px; padding-right: 20px">
+        <form id="payment-form" action="order-confirmation.html" method="POST">
+            <script id="stripe-script" src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                    data-key="pk_test_LACZeAF8IKmp21kRyEiMi0dn" data-name="FreshMart"
+                    data-description="Quality Products"
+                    data-image="https://stripe.com/img/documentation/checkout/marketplace.png" data-locale="auto">
+            </script>
+        </form>
+    </div>
+
+    <div data-role="footer" data-position="fixed" role="contentinfo"
+         class="ui-footer ui-bar-inherit ui-footer-fixed slideup">
+
+        <div data-role="navbar" class="ui-navbar" role="navigation">
+            <ul class="ui-grid-d">
+                <li class="ui-block-a"><a href="../html/home.html" class="ui-link ui-btn" rel="external"><i
+                        class="material-icons-outlined">home</i></a></li>
+                <li class="ui-block-b"><a href="../html/search.html"
+                                          class="ui-btn-active ui-state-persist ui-link ui-btn" rel="external"><i
+                        class="material-icons-outlined">search</i></a></li>
+                <li class="ui-block-c"><a href="../html/cart.html" class="ui-link ui-btn" rel="external"><i
+                        class="material-icons-outlined">shopping_cart</i></a></li>
+                <li class="ui-block-d"><a href="../html/profile.html" class="ui-link ui-btn" rel="external"><i
+                        class="material-icons-outlined">person_outline</i></a></li>
+                <li class="ui-block-e"><a href="../html/more.html" class="ui-link ui-btn" rel="external"><i
+                        class="material-icons">list</i></a></li>
+            </ul>
+        </div>
+        <h4 style="display:none;" class="ui-title" role="heading" aria-level="1">Footer</h4>
+    </div>
+
+</div>
+<script type="text/javascript" src="../data/products.json"></script>
+<script type="text/javascript" src="../js/payment.js"></script>
+</body>
 </html>
