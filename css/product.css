@@ -1,0 +1,44 @@
+.favourite-list-button {
+    padding-right: 20px;
+    padding-left: 20px;
+    border: none;
+    background-color: white;
+    position: fixed !important;
+}
+
+.favourite-button {
+    width: 100% !important;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.favourite-labels {
+    font-size: 16px !important;
+}
+.ui-block-a{
+    float: right;
+    top: 0;
+    right: 0;
+
+}
+.border-heart{
+    color: #4caf50;
+    font-size: 22px;
+
+}
+.selected-heart{
+    color: #4caf50;
+    font-size: 22px;
+}
+
+
+.add-to-cart-button {
+    width: 100% !important;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-family: "Raleway";
+}

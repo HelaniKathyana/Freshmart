@@ -1,0 +1,340 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Freshmart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" href="../library/fontawesome/css/all.min.css"/>
+    <link rel="stylesheet" href="../library/jquery/jquery.mobile.structure-1.4.5.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="../library/materialize/css/materialize.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/cards.css"/>
+    <link rel="stylesheet" href="../css/product.css"/>
+    <link rel="stylesheet" href="../css/header.css"/>
+    <link rel="stylesheet" href="../css/footer.css">
+
+    <!-- Scripts -->
+    <script src="../library/jquery/jquery-1.11.1.js"></script>
+    <script src="../library/jquery/jquery.mobile-1.4.5.min.js"></script>
+    <script src="../js/product.js"></script>
+</head>
+<body>
+
+<div data-role="page">
+
+    <div data-role="header">
+        <div class="container">
+            <div class="header-icon">
+                <div class="icon">
+                    <a href="" data-ajax="false" class="icon">
+                        <i class="zmdi zmdi-chevron-left zmdi-hc-2x"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="header-icon">
+                <div class="icon">
+                    <a href="" data-ajax="false" class="icon">
+                        <i class="zmdi zmdi-sign-in zmdi-hc-2x"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="heading">
+                <div class="logo">
+                    <img src="../images/logo color-01.png" style="width:80px;height:50px;margin: 5px;"><br>
+                </div>
+            </div>
+
+            <div class="header-icon">
+                <div class="icon">
+                    <a href="" data-ajax="false" class="icon">
+                        <i class="zmdi zmdi-search zmdi-hc-2x"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="header-icon">
+                <div class="icon">
+                    <a href="" data-ajax="false" class="icon">
+                        <i class="zmdi zmdi-shopping-cart zmdi-hc-2x"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-top: 20px">
+    </div>
+    <div data-role="content">
+        <div class="main-content" style="margin-top: 50px;">
+
+            <h4 style="text-align: center"> Grocery </h4>
+
+
+            <div id="item-list" class="item-container" style="padding-left: 10px; padding-right: 10px;">
+
+
+                <div class="card item-card">
+                    <div class="item-image-container"
+                         style="background-image: url('../resources/images/inguru-biscuit.jpg')"></div>
+                    <div class="item-details">
+                        <div>
+                            <div class="item-header-container">
+                                <strong class="item-header-text"><b>Maliban Inguru Biscuits</b></strong>
+                                <div class="ui-block-a" style="top: 0; right:0;" id="product_favourite1">
+                                    <i class="far fa-heart border-heart"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <p>Ceylon Biscuits Limited (CBL) is one of the fastest growing and largest conglomerates
+                                    in Sri Lanka.</p>
+                            </div>
+                            <div>
+                                <p><b>Rs. 60.00</b></p>
+                            </div>
+                            <div>
+                            <span class="d-inline-block" style="float: right; padding-top:10px;">
+            <a href="../html/payment.html" data-role="button" class="add-to-cart-button"
+               rel="external"><b>ADD TO CART</b></a>
+        </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card item-card">
+                    <div class="item-image-container"
+                         style="background-image: url('../resources/images/kitkat.png')"></div>
+                    <div class="item-details">
+                        <div>
+                            <div class="item-header-container">
+                                <strong class="item-header-text"><b>KitKat Chunky Chocolate</b></strong>
+                                <div class="ui-block-a" style="top: 0; right:0;" id="product_favourite2">
+                                    <i class="far fa-heart  border-heart"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <p>The standard bars consist of two or four pieces composed of three layers of wafer,
+                                    separated and covered by an outer layer.</p>
+                            </div>
+                            <div>
+                                <p><b>Rs. 400.00</b></p>
+                            </div>
+                            <div>
+                            <span class="d-inline-block" style="float: right; padding-top:10px;">
+            <a href="../html/payment.html" data-role="button" class="add-to-cart-button"
+               rel="external"><b>ADD TO CART</b></a>
+        </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card item-card">
+                    <div class="item-image-container"
+                         style="background-image: url('../resources/images/anchor-butter.png')"></div>
+                    <div class="item-details">
+                        <div>
+                            <div class="item-header-container">
+                                <strong class="item-header-text"><b>Anchor Butter</b></strong>
+                                <div class="ui-block-a" style="top: 0; right:0;" id="product_favourite3">
+                                    <i class="far fa-heart  border-heart"></i>
+                                </div>
+                            </div>
+
+                            <div>
+                                <p>Anchor Salted Butter uses only the freshest cream from pasture-fed cows. Free from
+                                    additives, preservatives and coloring, making every meal irresistible and naturally
+                                    delicious.</p>
+                            </div>
+                            <div>
+                                <p><b>Rs. 625.00</b></p>
+                            </div>
+                            <div>
+                            <span class="d-inline-block" style="float: right; padding-top:10px;">
+            <a href="../html/payment.html" data-role="button" class="add-to-cart-button"
+               rel="external"><b>ADD TO CART</b></a>
+        </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card item-card">
+                    <div class="item-image-container"
+                         style="background-image: url('../resources/images/kottume.jpg')"></div>
+                    <div class="item-details">
+                        <div>
+                            <div class="item-header-container">
+                                <strong class="item-header-text"><b>Maggi Papare Kottu</b></strong>
+                                <div class="ui-block-a" style="top: 0; right:0;" id="product_favourite4">
+                                    <i class="far fa-heart  border-heart"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <p>Maggi Papare Kottu, a mouth-watering and tongue-tingling Noodle made using Onion,
+                                    Garlic, Chilli and Pepper.</p>
+                            </div>
+                            <div>
+                                <p><b>Rs. 60.00</b></p>
+                            </div>
+                            <div>
+                            <span class="d-inline-block" style="float: right; padding-top:10px;">
+            <a href="../html/payment.html" data-role="button" class="add-to-cart-button"
+               rel="external"><b>ADD TO CART</b></a>
+        </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card item-card">
+                    <div class="item-image-container"
+                         style="background-image: url('../resources/images/munchee-kome.png')"></div>
+                    <div class="item-details">
+                        <div>
+                            <div class="item-header-container">
+                                <strong class="item-header-text"><b>Munchee Kome</b></strong>
+                                <div class="ui-block-a" id="product_favourite5">
+                                    <i class="far fa-heart  border-heart"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <p>Munchee Rice Cracker uses the nations staple grain to create a wholesome and tasty
+                                    snack. It has a unique texture, light yet full of satisfying goodness.</p>
+                            </div>
+                            <div>
+                                <p><b>Rs. 100.00</b></p>
+                            </div>
+                            <div>
+                            <span class="d-inline-block" style="float: right; padding-top:10px;">
+            <a href="../html/payment.html" data-role="button" class="add-to-cart-button"
+               rel="external"><b>ADD TO CART</b></a>
+        </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card item-card">
+                    <div class="item-image-container"
+                         style="background-image: url('../resources/images/jelly.jpg')"></div>
+                    <div class="item-details">
+                        <div>
+                            <div class="item-header-container">
+                                <strong class="item-header-text"><b>MD - Jelly Crystal Apple</b></strong>
+                                <div class="ui-block-a" id="product_favourite6">
+                                    <i class="far fa-heart  border-heart"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <p>Superior Quality Product, Quick and easy to prepare, Enjoy Delicious Jelly instantly,
+                                    Delicious, Refreshing Taste, Distinctive taste and Fires up your mind.</p>
+                            </div>
+                            <div>
+                                <p><b>Rs. 1440.00</b></p>
+                            </div>
+                            <div>
+                            <span class="d-inline-block" style="float: right; padding-top:10px;">
+            <a href="../html/payment.html" data-role="button" class="add-to-cart-button"
+               rel="external"><b>ADD TO CART</b></a>
+        </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card item-card">
+                    <div class="item-image-container"
+                         style="background-image: url('../resources/images/choco-cream.jpg')"></div>
+                    <div class="item-details">
+                        <div>
+                            <div class="item-header-container">
+                                <strong class="item-header-text"><b>Chocolate Cream Biscuit</b></strong>
+                                <div class="ui-block-a" id="product_favourite7">
+                                    <i class="far fa-heart  border-heart"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <p>Chocolate, always a favourite and this blend of chocolate flavour cream sandwiched
+                                    between two crumbly chocolate biscuits is a very popular choice with a relaxing
+                                    cuppa.</p>
+                            </div>
+                            <div>
+                                <p><b>Rs. 60.00</b></p>
+                            </div>
+                            <div>
+                            <span class="d-inline-block" style="float: right; padding-top:10px;">
+            <a href="../html/payment.html" data-role="button" class="add-to-cart-button"
+               rel="external"><b>ADD TO CART</b></a>
+        </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card item-card">
+                    <div class="item-image-container"
+                         style="background-image: url('../resources/images/fanta.jpg')"></div>
+                    <div class="item-details">
+                        <div>
+                            <div class="item-header-container">
+                                <strong class="item-header-text"><b>Fanta Orange Bottle</b></strong>
+                                <div class="ui-block-a" id="product_favourite8">
+                                    <i class="far fa-heart  border-heart"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <p>Bright, bubbly, instantly refreshing and great tasting. Fanta Orange is made with
+                                    100% natural flavours, fruit juice and is caffeine free.</p>
+                            </div>
+                            <div>
+                                <p><b>Rs. 80.00</b></p>
+                            </div>
+                            <div>
+                            <span class="d-inline-block" style="float: right; padding-top:10px;">
+            <a href="../html/payment.html" data-role="button" class="add-to-cart-button"
+               rel="external"><b>ADD TO CART</b></a>
+        </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <div data-role="footer" data-position="fixed" role="contentinfo"
+             class="ui-footer ui-bar-inherit ui-footer-fixed slideup">
+
+            <div data-role="navbar" class="ui-navbar" role="navigation">
+                <ul class="ui-grid-d">
+                    <li class="ui-block-a"><a href="../iphone/Home - FreshMart.html" class="ui-link ui-btn" rel="external"><i
+                            class="material-icons-outlined">home</i></a></li>
+                    <li class="ui-block-b"><a href="../html/search.html"
+                                              class="ui-btn-active ui-state-persist ui-link ui-btn" rel="external"><i
+                            class="material-icons-outlined">search</i></a></li>
+                    <li class="ui-block-c"><a href="../iphone/cart.html" class="ui-link ui-btn" rel="external"><i
+                            class="material-icons-outlined">shopping_cart</i></a></li>
+                    <li class="ui-block-d"><a href="../iphone/profile.html" class="ui-link ui-btn" rel="external"><i
+                            class="material-icons-outlined">person_outline</i></a></li>
+                    <li class="ui-block-e"><a href="../iphone/More.html" class="ui-link ui-btn" rel="external"><i
+                            class="material-icons">list</i></a></li>
+                </ul>
+            </div>
+            <h4 style="display:none;" class="ui-title" role="heading" aria-level="1">Footer</h4>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
