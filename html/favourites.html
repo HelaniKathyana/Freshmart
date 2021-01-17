@@ -1,110 +1,136 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>Freshmart</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Freshmart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- the three things that jQuery Mobile needs to work -->
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <!-- the three things that jQuery Mobile needs to work -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-<link rel="stylesheet" href="../css/app.css"/>
-<link rel="stylesheet" href="../css/header.css"/>
-<link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/header.css"/>
+    <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/style.css">
-<link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
 
 <body>
 
-    <!-- HEADER -->
-    <div data-role="header">
-                <div class="container">
-                    <div class="header-icon">
-                        <div class="icon">
-                            <a href="" data-ajax="false" class="icon">
-                                <i class="zmdi zmdi-chevron-left zmdi-hc-2x"></i>
-                            </a>
-                        </div>
-                    </div>
-					<div class="header-icon">
-                        <div class="icon">
-                            <a href="" data-ajax="false" class="icon">
-                                <i class="zmdi zmdi-sign-in zmdi-hc-2x"></i>
-                            </a>
-                        </div>
-                    </div>
-
-					<div class="heading">
-                        <div class="logo">
-						<img src="../images/logo color-01.png" style="width:80px;height:50px;margin: 5px;"><br>
-						</div>
-                    </div>
-
-					 <div class="header-icon">
-                        <div class="icon">
-                            <a href="" data-ajax="false" class="icon" >
-                                <i class="zmdi zmdi-search zmdi-hc-2x"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="header-icon">
-                        <div class="icon">
-                            <a href="" data-ajax="false" class="icon" >
-                                <i class="zmdi zmdi-shopping-cart zmdi-hc-2x"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+<!-- HEADER -->
+<div data-role="header">
+    <div class="container">
+        <div class="header-icon">
+            <div class="icon">
+                <a href="" data-ajax="false" class="icon">
+                    <i class="zmdi zmdi-chevron-left zmdi-hc-2x"></i>
+                </a>
             </div>
+        </div>
+        <div class="header-icon">
+            <div class="icon">
+                <a href="" data-ajax="false" class="icon">
+                    <i class="zmdi zmdi-sign-in zmdi-hc-2x"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="heading">
+            <div class="logo">
+                <img src="../images/logo color-01.png" style="width:80px;height:50px;margin: 5px;"><br>
+            </div>
+        </div>
+
+        <div class="header-icon">
+            <div class="icon">
+                <a href="" data-ajax="false" class="icon">
+                    <i class="zmdi zmdi-search zmdi-hc-2x"></i>
+                </a>
+            </div>
+        </div>
+        <div class="header-icon">
+            <div class="icon">
+                <a href="" data-ajax="false" class="icon">
+                    <i class="zmdi zmdi-shopping-cart zmdi-hc-2x"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="favourite-container" style="background-color: white;">
-  <div class="heading" style="padding-top: 80px; background-color: white;">
-    <h1>My Favourits</h1>
-  </div>
-
-    <div  style="padding-top: 40px; background-color: white;">
-    <label class="select-all-checkbox">
-      <input class="select-all" id="select-all" type="checkbox" data-role="none">
-      <span class="checkmark"></span><p id="checkbox-label"> Select All</p></label>
+    <div class="heading" style="padding-top: 80px; background-color: white;">
+        <h1>My Favourits</h1>
     </div>
 
-  <div class="products">
-    <ul class="favourite-products" id="favourite-products">
-    </ul>
-  </div>
-
-  <div class="share-favourites" disabled> <span>Share Favourites</span> </div>
-
-  <div id="myModal" class="modal">
-
-    <!-- Modal content -->
-    <div class="modal-content">
-      <div class="modal-header"> <span class="close" id="close-btn">&times;</span>
-        <h2>SHARE FAVOURITES</h2>
-      </div>
-      <div class="modal-body">
-        <input class="modal-text-box" id="email" type="text" placeholder="Email" data-role="none" required/>
-        <br>
-        <p class="error-text" id="error-text">Please enter a valid E-mail address!</p>
-        <button class="modal-button" id="share-btn" data-role="none" type="submit">Share</button>
-      </div>
+    <div style="padding-top: 40px; background-color: white;">
+        <label class="select-all-checkbox">
+            <input class="select-all" id="select-all" type="checkbox" data-role="none">
+            <span class="checkmark"></span>
+            <p id="checkbox-label"> Select All</p></label>
     </div>
-  </div>
-  <div id="success-toast"> <span class="material-icons success-icon">check_circle</span>
-    <p data-role="none">Sent successfully!</p>
-  </div>
-  <div id="error-toast"> <span class="material-icons error-icon">cancel</span>
-    <p data-role="none">Email not delivered!</p>
-  </div>
+
+    <div class="products">
+        <ul class="favourite-products" id="favourite-products">
+        </ul>
+    </div>
+
+    <div class="share-favourites" disabled><span>Share Favourites</span></div>
+
+<!--    <div data-role="footer" data-position="fixed" role="contentinfo"
+         class="ui-footer ui-bar-inherit ui-footer-fixed slideup">
+
+        <div data-role="navbar" class="ui-navbar" role="navigation">
+            <ul class="ui-grid-d">
+                <li class="ui-block-a"><a href="../iphone/Home - FreshMart.html" class="ui-link ui-btn"
+                                          rel="external"><i
+                        class="material-icons-outlined">home</i></a></li>
+                <li class="ui-block-b"><a href="../html/search.html"
+                                          class="ui-btn-active ui-state-persist ui-link ui-btn" rel="external"><i
+                        class="material-icons-outlined">search</i></a></li>
+                <li class="ui-block-c"><a href="../iphone/cart.html" class="ui-link ui-btn" rel="external"><i
+                        class="material-icons-outlined">shopping_cart</i></a></li>
+                <li class="ui-block-d"><a href="../iphone/profile.html" class="ui-link ui-btn" rel="external"><i
+                        class="material-icons-outlined">person_outline</i></a></li>
+                <li class="ui-block-e"><a href="../iphone/More.html" class="ui-link ui-btn" rel="external"><i
+                        class="material-icons">list</i></a></li>
+            </ul>
+        </div>
+        <h4 style="display:none;" class="ui-title" role="heading" aria-level="1">Footer</h4>
+    </div>-->
+
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header"><span class="close" id="close-btn">&times;</span>
+                <h2>SHARE FAVOURITES</h2>
+            </div>
+            <div class="modal-body">
+                <input class="modal-text-box" id="email" type="text" placeholder="Email" data-role="none" required/>
+                <br>
+                <p class="error-text" id="error-text">Please enter a valid E-mail address!</p>
+                <button class="modal-button" id="share-btn" data-role="none" type="submit">Share</button>
+            </div>
+        </div>
+    </div>
+    <div id="success-toast"><span class="material-icons success-icon">check_circle</span>
+        <p data-role="none">Sent successfully!</p>
+    </div>
+    <div id="error-toast"><span class="material-icons error-icon">cancel</span>
+        <p data-role="none">Email not delivered!</p>
+    </div>
 </div>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-<script type="text/javascript" src="../data/products.json" ></script>
-<script type="text/javascript" src="../js/favscript.js" ></script>
+<script type="text/javascript" src="../data/products.json"></script>
+<script type="text/javascript" src="../js/favscript.js"></script>
 
 </body>
 </html>
