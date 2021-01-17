@@ -1,14 +1,20 @@
-/i-phone style/
+/*/i-phone style/*/
 .product-image-iphone,
 .product-info-iphone,
 .product-description-iphone,
 .comment-section-iphone {
-  margin: 5%;
+  margin: 3%;
 }
 
-.product-image-iphone img {
-  width: 100%;
-  padding: 3%;
+.product-image img {
+  width: 80%;
+  height: 80%;
+}
+
+.product-name,
+.product-price-sub-topic{
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .product-info-iphone,
@@ -74,7 +80,7 @@
   border-radius: 1em 0 1em 0 !important;
   box-shadow: 0 0 8px 5px rgba(33, 22, 22, 0.1) !important;
   background-color: white !important;
-  font-size: 12;
+  font-size: 12px;
   font-family: "Open Sans";
   margin-top: -3% !important;
 }
@@ -114,29 +120,6 @@
   font-style: italic;
   font-size: 11px !important;
   color: #8cc63f;
-}
-
-/i-pad styles/
-
-#ipad-grid {
-  display: none;
-}
-
-.comment-section {
-  background-color: #f7f7f7;
-}
-
-.ipad-column1 {
-  padding: 4%;
-}
-
-.ipad-column2 {
-  padding-top: 1%;
-  padding-right: 4%;
-}
-.ipad-column1 img {
-  margin-top: 13%;
-  width: 100%;
 }
 
 .rating-heading {
@@ -196,7 +179,7 @@
   border-radius: 1em 0 1em 0 !important;
   box-shadow: 0 0 8px 5px rgba(33, 22, 22, 0.1) !important;
   background-color: white !important;
-  font-size: 12;
+  font-size: 12px;
   font-family: "Open Sans";
   margin-top: -3% !important;
 }
@@ -260,12 +243,61 @@
   position: fixed !important;
 }
 
-.place-order-button {
+.reply-button {
   width: 100% !important;
   background-color: #4CAF50;
   color: white;
   border: none;
   border-radius: 5px;
   font-family: "Raleway";
+  font-size: 12px;
 }
+
+.place-order-button {
+  width: 100% !important;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-family: "Raleway";
+}
+
+body {
+  font-family: Arial;
+  margin: 0 auto; /* Center website */
+  max-width: 800px; /* Max width */
+  padding: 20px;
+}
+
+.heading {
+  font-size: 25px;
+  margin-right: 25px;
+}
+
+.fa {
+  font-size: 25px;
+}
+
+.checked {
+  color: #FFD314;
+}
+
+.raiting{
+  width: 40px; !important;
+  height: 25px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-family: "Raleway";
+  text-align: center;
+}
+
+.border-heart{
+  color: #4caf50;
+  font-size: 22px;
+}
+.selected-heart{
+  color: #4caf50;
+  font-size: 22px;
 }

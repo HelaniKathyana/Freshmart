@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Freshmart</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../library/fontawesome/css/all.min.css"/>
+    <link rel="stylesheet" href="../library/jquery/jquery.mobile.structure-1.4.5.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="../library/materialize/css/materialize.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../css/item.css"/>
+    <link rel="stylesheet" href="../css/header.css"/>
+    <link rel="stylesheet" href="../css/footer.css">
+
+    <!-- Scripts -->
+    <script src="../library/jquery/jquery-1.11.1.js"></script>
+    <script src="../library/jquery/jquery.mobile-1.4.5.min.js"></script>
+    <script src="../js/item.js"></script>
+    <style>
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* The bar container */
+        .bar-container {
+            width: 100%;
+            background-color: #f1f1f1;
+            text-align: center;
+            color: white;
+        }
+
+        /* Individual bars */
+        .bar-5 {
+            width: 60%;
+            height: 5px;
+            background-color: #FFD314;
+        }
+
+        .bar-4 {
+            width: 30%;
+            height: 5px;
+            background-color: #FFD314;
+        }
+
+        .bar-3 {
+            width: 10%;
+            height: 5px;
+            background-color: #FFD314;
+        }
+
+        .bar-2 {
+            width: 4%;
+            height: 5px;
+            background-color: #FFD314;
+        }
+
+        .bar-1 {
+            width: 15%;
+            height: 5px;
+            background-color: #FFD314;
+        }
+
+        /* Responsive layout - make the columns stack on top of each other instead of next to each other */
+        @media (max-width: 400px) {
+            .side, .middle {
+                width: 100%;
+            }
+
+            .right {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div data-role="page" id="page-body">
+
+    <div data-role="header">
+        <div class="container">
+            <div class="header-icon">
+                <div class="icon">
+                    <a href="" data-ajax="false" class="icon">
+                        <i class="zmdi zmdi-chevron-left zmdi-hc-2x"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="header-icon">
+                <div class="icon">
+                    <a href="" data-ajax="false" class="icon">
+                        <i class="zmdi zmdi-sign-in zmdi-hc-2x"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="heading">
+                <div class="logo">
+                    <img src="../images/logo color-01.png" style="width:80px;height:50px;margin: 5px;"><br>
+                </div>
+            </div>
+
+            <div class="header-icon">
+                <div class="icon">
+                    <a href="" data-ajax="false" class="icon">
+                        <i class="zmdi zmdi-search zmdi-hc-2x"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="header-icon">
+                <div class="icon">
+                    <a href="" data-ajax="false" class="icon">
+                        <i class="zmdi zmdi-shopping-cart zmdi-hc-2x"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div role="content">
+
+        <div class="main-content">
+
+            <center>
+                <div class="product-image">
+                    <img src="../images/inguru-biscuit.jpg">
+                </div>
+            </center>
+
+            <!--Product information-->
+            <div class="product-info" style="background-color: white;">
+                <center>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a" id="product_favourite">
+                            <i class="far fa-heart  border-heart"></i>
+                        </div>
+                        <div class="ui-block-b">
+                            <i class="fas fa-minus-square"
+                               style="font-size: 20px; color: #FFD314; padding-right: 22px;"></i>
+                            <span style="font-size: 22px;">1</span>
+                            <i class="fas fa-plus-square"
+                               style="font-size: 22px; color: #FFD314; padding-left:22px;"></i>
+                        </div>
+                    </div>
+                </center>
+                <p class="product-name page-details"><b>Maliban Inguru Biscuit</b></p>
+                <p class="product-price-sub-topic">Biscuits</p>
+                <p class="product-price-sub-topic" style="color: #4caf50; float: right;">Write a Review<i
+                        class="far fa-edit" style="font-size: 14px; color: #4caf50;"></i></p>
+            </div>
+
+            <!--Product description-->
+            <div class="product-description-iphone">
+                <p class="description-heading sub-topic">Product Description</p>
+                <p class="page-details">Maliban Inguru Biscuit - 80Mg for sale in Fresh Mart Sri Lanka. Island wide
+                    delivery within 48 hours and Delivery within Colombo in 24 hours.</p>
+            </div>
+
+            <hr>
+
+            <div style="padding-left: 10px;">
+                <span style="font-size: 14px;">Your Raiting of this product</span>
+                <div style="display:flex;justify-content: space-around">
+                    <div id="product_rating_stars">
+                        <span class="fa fa-star checked" star-index="1" style="font-size: 22px;"></span>
+                        <span class="fa fa-star checked" star-index="2" style="font-size: 22px;"></span>
+                        <span class="fa fa-star checked" star-index="3" style="font-size: 22px;"></span>
+                        <span class="fa fa-star checked" star-index="4" style="font-size: 22px;"></span>
+                        <span class="fa fa-star" star-index="5" style="font-size: 22px;"></span>
+                    </div>
+                </div>
+
+                <div>
+                <span class="d-inline-block" style="float: left; padding-top: 10px;">
+                    <div class="raiting">4.5</div>
+                </span>
+
+                    <span class="d-inline-block" style="float: right; padding-right:220px; padding-bottom: 10px;">
+                    <p>Very Good</p>
+                </span>
+                </div>
+            </div>
+
+            <hr>
+            <br>
+            <div class="row" style="padding-left: 10px; padding-right:10px;">
+                <div class="side">
+                    <div>5 star</div>
+                </div>
+                <div class="middle">
+                    <div class="bar-container">
+                        <div class="bar-5"></div>
+                    </div>
+                </div>
+                <div class="side right">
+                    <div>150</div>
+                </div>
+                <div class="side">
+                    <div>4 star</div>
+                </div>
+                <div class="middle">
+                    <div class="bar-container">
+                        <div class="bar-4"></div>
+                    </div>
+                </div>
+                <div class="side right">
+                    <div>63</div>
+                </div>
+                <div class="side">
+                    <div>3 star</div>
+                </div>
+                <div class="middle">
+                    <div class="bar-container">
+                        <div class="bar-3"></div>
+                    </div>
+                </div>
+                <div class="side right">
+                    <div>15</div>
+                </div>
+                <div class="side">
+                    <div>2 star</div>
+                </div>
+                <div class="middle">
+                    <div class="bar-container">
+                        <div class="bar-2"></div>
+                    </div>
+                </div>
+                <div class="side right">
+                    <div>6</div>
+                </div>
+                <div class="side">
+                    <div>1 star</div>
+                </div>
+                <div class="middle">
+                    <div class="bar-container">
+                        <div class="bar-1"></div>
+                    </div>
+                </div>
+                <div class="side right">
+                    <div>20</div>
+                </div>
+            </div>
+
+            <!--Comment section-->
+            <div class="comment-section-iphone" style="background-color: white;">
+                <p class="rating-heading sub-topic">Reviews (40)</p>
+
+                <div class="comment-display-iphone" style="background-color: white;">
+                    <ul data-role="listview">
+                            
+                        <li class="comment-details-iphone">
+                            <fieldset class="ui-grid-a product-detail-section-iphone">
+                                <div class="ui-block-a avatar-iphone">
+                                    <img class="user-avatar-iphone" src="../images/user-picture1.png">
+                                </div>
+                                <div class="user-comment-display">
+                                    <p class="user-name-iphone">Helani Rathnayake</p>
+                                    <div class="rating-iphone"></div>
+                                    <p class="user-comment-iphone">“I like this Product since my childhood.Today So many
+                                        biscuit products are available in market. but ginger is best of them.”</p>
+                                </div>
+                                <span style="float: right; padding-top:10px;">
+                        <a href="#" data-role="button" class="reply-button" rel="external"><b>Reply</b></a>
+                      </span>
+                            </fieldset>
+                        </li>
+                        <br>
+                        <li class="comment-details-iphone">
+                            <fieldset class="ui-grid-a product-detail-section-iphone">
+                                <div class="ui-block-a avatar-iphone">
+                                    <img class="user-avatar-iphone" src="../images/user-picture2.png">
+                                </div>
+                                <div class="ui-block-b user-comment-display">
+                                    <p class="user-name-iphone">Prabath Balasooriya</p>
+                                    <div class="rating-iphone"></div>
+                                    <p class="user-comment-iphone">“I like the inguru biscuit very much. Taste is good.
+                                        Quality is excellent.”</p>
+                                </div>
+                                <span style="float: right; padding-top:10px;">
+                        <a href="#" data-role="button" class="reply-button" rel="external"><b>Reply</b></a>
+                      </span>
+                            </fieldset>
+                        </li>
+                    </ul>
+                </div>
+
+                <div style="padding-bottom: 60px;"></div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-position="fixed" role="contentinfo"
+         class="ui-footer ui-bar-inherit ui-footer-fixed slideup">
+
+        <div class="place-order-list-button"
+             style="position:absolute; bottom:42px; left:0px; right:0px; overflow:hidden;">
+       <span class="d-inline-block" style="float: left; padding-bottom: 10px;">
+            <p style="font-size: 16px;">Rs. 60.00 <br/> <span id="total2" class="price"
+                                                              style="color:#4CAF50;"><b></b></span></p>
+        </span>
+
+            <span class="d-inline-block" style="float: right; padding-top:10px;">
+            <a href="../html/payment.html" data-role="button" class="place-order-button"
+               rel="external"><b>ADD TO CART</b></a>
+        </span>
+        </div>
+
+        <div data-role="navbar" class="ui-navbar" role="navigation">
+            <ul class="ui-grid-d">
+                <li class="ui-block-a"><a href="../html/home.html" class="ui-link ui-btn" rel="external"><i
+                        class="material-icons-outlined">home</i></a></li>
+                <li class="ui-block-b"><a href="../html/search.html"
+                                          class="ui-btn-active ui-state-persist ui-link ui-btn" rel="external"><i
+                        class="material-icons-outlined">search</i></a></li>
+                <li class="ui-block-c"><a href="../html/cart.html" class="ui-link ui-btn" rel="external"><i
+                        class="material-icons-outlined">shopping_cart</i></a></li>
+                <li class="ui-block-d"><a href="../html/profile.html" class="ui-link ui-btn" rel="external"><i
+                        class="material-icons-outlined">person_outline</i></a></li>
+                <li class="ui-block-e"><a href="../html/more.html" class="ui-link ui-btn" rel="external"><i
+                        class="material-icons">list</i></a></li>
+            </ul>
+        </div>
+        <h4 style="display:none;" class="ui-title" role="heading" aria-level="1">Footer</h4>
+    </div>
+</div>
+</body>
+
+</html>
